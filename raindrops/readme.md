@@ -9,12 +9,10 @@
 # [my face in the raindrops](https://stigc.dk/c64/basic/?s=2nVftbtswDPyfp8iC_LA3FRApyZJcFHuWNMnWYl1SGB72UfTdR0qyYyduYhuIXDUIqdPpeJRBLl-PP_aFLgSUPDMKHQjZziXNN-uH1dvu-PvwPu-5Krec4Xv1F975ifw8pMfLB8_fTzUFvlbPh3r1tn2p3lcLMMvd889_GUgp8_LbsXp-kPXRe19W-83uX_acl1-3T9U642l-Xx72f-ryaxONcrl5oGxZddhlMv-MOi8fu18on5fb3i_U3SaPTGj0hZALRXRFRE_Hn_v31f3L_lu9zjZrsQmAdgxoG1HXm8fsMU-_2K7FLr9faLmsHl73-x8ZgubV0hzyO0h7_fTGEZQ6_p_2k2n5ucq_bPM87ur7sT6iXJh4fBEemC5W4qT-VR0WtG-53G3qzdIKQOEFSqGEE6CEpqcWWhih8PqHkkBM0n4JUgkAWhWAUtK8kO1ADcK66_nwLN-4DwWqwUCQTqDRLRRUBc11HxZa4R2l0DGFM_SVmrS4mYTa0vrIdEgKLWIoakXgVABz4s22ABlRd95f385lzX3MGjNl-kwNDMrhY47whafdEX0GaIdqBACQk5Ajj8gOxUJn4RGjoQ5ND8FcxYG6kL6OWkus0dneZg_05SaoCggozSXcBDFWeRdgrKLoYhqD7XCkDeoNDYi58oNz-dlGbzgWCyXxAwxqk_4WtzDgWAVCw6A1p8URZjAIVF2abdK2IOaKEM9FyDs_993TmRO91AQQaYCMZRp2cSZCFgt5A215FIZRGmRPibkhgpGhnCn8mgi9uyxjalHWs810IMxVIPYUGIqu5UD1jJibF9sPeB32gNzgjIqFhEmDhAs1DfAUA8LJQOMNDGqUAl0XGpwUqAYUeHIgbOu1ratUY3Rs3RpWcxWoTgoEpApm1ljjyW9hQIrOnsmS0wz4IHAy1Tvqj0DckGBoaHyg6IQ36Sxdh8Ri2IUDWTxccdZKIol9EHNFqJII-e7E8gkdVEclKege93UnVEmFoXxD-25KDUag0GON0GKwr87RUvAIH-S9BO_jHJH8XhHruRLUPRMEaYNq6FYUWzJftZT90BVDUUtOkyQYdKtdKF0OGodhwhWQ7CKxl_xXN5dAdWl3LAbsFUsoW7wAMFd9euAOGJQoI1Je1dueCsNJNn7Ot1jd9GBINeNs-NEoAGbiHdAk42XmTEd3AbD00XWL03kHw4ME1vJe-svPlZ0ZfuWwerBiWVWn_22CP-R6YEeub6YCh2hbFDrx4sducrH8XMEZdyWQIZ7T17Yz9jTtKUNjdFTmQL12wuKFnIm6aN50fXx5Uz4dK1-Tbjao4rrIFsbQ2_nyjnxI_wc)
 ```basic
 10 poke646,1:poke53281,0:poke53280,0:a$="{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}":c$="{gry1}{gry2}{grn}{grn}{lgrn}{lgrn}{lgrn}{lgrn}{wht}":print"{clr}"
-15 dimz(1000):fori=0to999:readz(i):?chr$(z(i));:next:?"{clr}"
-20 a=int(rnd(0)*24):b=int(rnd(0)*39):c=int(rnd(0)*23-a):poke54296,0
+15 dimz(1000):fori=0to999:readz(i):?".";:next:?"{clr}"
+20 a=int(rnd(0)*24):b=int(rnd(0)*39):c=int(rnd(0)*23-a)
 30 print"{home}";left$(a$,a):ford=0toc:printtab(b);left$(c$,d);
-40 r=peek(214):c=peek(211):print"!{left}";:printchr$(z((40*r)+c)):next:goto20
-50 poke54296,15:poke54296,0:return
-
+40 r=peek(214):c=peek(211):print"!{left}";chr$(z((40*r)+c)):next:goto20
 200 data 7,12,9,20,3,8,13,48,14,4,5,32,32,32,32,32,32,32,32,32,32,32
 201 data 32,32,32,103,116,111,203,160,160,160,241,78,32,32,32,32,32,32,32,32,32
 202 data 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
@@ -78,5 +76,4 @@
 260 data 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
 261 data 39,120,239,160,228,105,32,32,32,32,32,32,32,32,32,32
 262 data 32,32,32,32,32,32,32,32
-55296 -1024
 ```
