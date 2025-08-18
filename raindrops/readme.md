@@ -11,11 +11,11 @@ https://github.com/user-attachments/assets/079c7df8-21fc-4def-a56e-73798ff37d51
 https://github.com/user-attachments/assets/9dc681ad-50da-4aee-b5b3-5d360d313da7
 ```basic
 10 poke646,1:poke53281,0:poke53280,0:a$="{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}":c$="{gry1}{gry2}{grn}{grn}{lgrn}{lgrn}{lgrn}{lgrn}{wht}":print"{clr}"
-15 dimz(1000):fori=0to999:readz(i):?chr$(z(i));:next:?"{clr}"
+15 dimz(1000):fori=0to999:readz(i):next
 20 a=int(rnd(0)*24):b=int(rnd(0)*39):c=int(rnd(0)*23-a)
 30 print"{home}";left$(a$,a):ford=0toc:printtab(b);left$(c$,d);
 40 r=peek(214):c=peek(211):print"!{left}";chr$(z((40*r)+c)):next:goto20
-200 data 32,32,32,32,32,32,32,32,32,32
+200 data 32,32,32,32,32,32,32,32,32,32,32
 201 data 32,32,32,103,116,111,203,160,160,160,241,78,32,32,32,32,32,32,32,32,32
 202 data 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
 203 data 32,32,32,32,32,108,254,203,160,236,204,160,160,160,227,98
