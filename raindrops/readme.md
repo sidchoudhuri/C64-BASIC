@@ -15,6 +15,7 @@ https://github.com/user-attachments/assets/682aed0e-2e5d-4bb6-a560-a6c9a112a3e2
 20 a=int(rnd(0)*24):b=int(rnd(0)*39):c=int(rnd(0)*23-a)
 30 print"{home}";left$(a$,a):ford=0toc:printtab(b);left$(c$,d);
 40 r=peek(214):c=peek(211):print"!{left}";chr$(z((40*r)+c)):next:goto20
+rem 40 r=peek(214):c=peek(211):ch=40*r+c:print"!{left}":poke1024+ch,z(ch):next:goto20
 200 data 32,32,32,32,32,32,32,32,32,32,32
 201 data 32,32,32,103,116,111,203,160,160,160,241,78,32,32,32,32,32,32,32,32,32
 202 data 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
