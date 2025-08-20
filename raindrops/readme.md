@@ -80,7 +80,7 @@ rem 40 r=peek(214):c=peek(211):ch=40*r+c:print"!{left}":poke1024+ch,z(ch):next:g
 261 data 39,120,239,160,228,105,32,32,32,32,32,32,32,32,32,32
 262 data 32,32,32,32,32,32,32,32
 ```
-# drops
+# [drops](https://stigc.dk/c64/basic/?s=2PYxLCoAwDAX3nsRPkSQaNYEepn5wIVgRF_b2Si3uZobHg8NvCzc0oAG97bnPORSliGiIgp84i0CtjpaZpNPJItZcfQNNFz0ZaqKM1W2mSO4l4RTDH4NBYF395bPsAQ)
 ```basic
 0poke53281,0:x=rnd(0)*999:y=rnd(1)*999:a=1024:b=55296:c=11.5+rnd(1):poke53272,23:pokeb+x,c:pokea+x,95:pokeb+y,c:pokea+y,105:goto
 ```
