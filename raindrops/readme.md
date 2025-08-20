@@ -80,3 +80,7 @@ rem 40 r=peek(214):c=peek(211):ch=40*r+c:print"!{left}":poke1024+ch,z(ch):next:g
 261 data 39,120,239,160,228,105,32,32,32,32,32,32,32,32,32,32
 262 data 32,32,32,32,32,32,32,32
 ```
+# drops
+```basic
+0poke53281,0:x=rnd(0)*999:y=rnd(1)*999:a=1024:b=55296:c=11.5+rnd(1):poke53272,23:pokeb+x,c:pokea+x,95:pokeb+y,c:pokea+y,105:goto
+```
