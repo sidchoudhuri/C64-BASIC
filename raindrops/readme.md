@@ -88,3 +88,8 @@ rem 40 r=peek(214):c=peek(211):ch=40*r+c:print"!{left}":poke1024+ch,z(ch):next:g
 ```basic
 0poke53272,23:?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);:goto
 ```
+# [rnd(0) vs rnd(1)](https://stigc.dk/c64/basic/?s=2M6iwLcpL0dDT1LK0tLSqBHMMIZxEW0MDIxOrgvzs1ETtCh1DczMouxLINrdKzy_J5-ICAA)
+```basic
+0x=rnd(.)*999:y=rnd(1)*999:a=1024:pokea+x,176:pokea+y,177:goto
+```
+
