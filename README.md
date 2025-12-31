@@ -3,3 +3,4 @@ Learning C64 BASIC
 - [glitch](/glitch/readme.md)
 - [horse](/horse/readme.md)
 - [raindrops](/raindrops/readme.md)
+- [hires oval](/oval/readme.md)
