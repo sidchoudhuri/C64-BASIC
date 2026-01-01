@@ -1,4 +1,4 @@
-``` basic
+```basic
 10 poke 53280,0:poke 53281,0:print chr$(147)
 20 text$="*** get ready! ***":gosub500
 30 for t=1 to 1000:next
