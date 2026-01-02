@@ -48,7 +48,7 @@
 2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
 2040 return
 ```
-# [happy 2026 with buildings.prg](https://stigc.dk/c64/basic/?s=2jVVLj5swEL7zKyZRDpAQ1TaPBFZU6u6hqlT10K3UMw8nWMsjMqQL_75jAw1hq9XmkDBmHt_M93lCCVzqFw6ew47EJuE_gypDiqqFNJcbk7pWCHf2wTIYgZZ37SZab7db-Mpb-MnjrF8BmuvwXDfXBAJCDIfAqZbQRhTaGighJKwwznCH8zSi-gWDpuUX2FPDI8ta4QxlOkeZGv6EomnROd1Ta1b6MJTIhtLuVPlIQP8GH24f2w0oDIk9TIxdjGVBd_-Dv8IjP4uqEtW5WQEjzAfRQM4lX8EefosmxzewNiidIvX3bt3XV2hzDglvWhCVfq4wXc9juVIBbBHwK-9UN3FRTO5PvgtxlcHjl-dvTzi7-izjshzrOYvwtC7LayVawRHn9_oPV8kQhIRTXIqiR7TPIgOzJFXGLQCVA6nqRETD5HpCuuGDHwxcUBlYBkXCugiPTFllJrW2LrHCfn5APfQ6jNRQwtxdj067znbZyJDHAn86nAf6GIjcDjQpoRkUKT6jMuNNKE74Ha3XamIV-igtegRVTIBXGYqOgOQlJFdRZIpEw0OmkrjhEXPDMu7yiBLDY4OiuiQiam5OEOZz7MrP2tFQ-fSjT64k7cz7MVXafZ9YuoXExpnMO3vz2vDcQbFavqHk7VVWqN674XrWQ3NJTQXGdMm-4JWpGbesT8yyHvTzFKpmo7s9Cclfa_nSqCNPHxXxtUpztOl0O1wEZfvhZBwOCPhmHW3mkpvp25QFKnq6LkzzQMbBnSKmh6JUre-7ewt17FM4XExKnFtxnfIY3mVzB_iX-oKGdweUenOk5H2g8-JMZ_YWuP33gRwm1chGwT7OvJfFyX-mdFxUC6Yp-XpKzPOGKfn3UxqHFCyj2XtY6ch5c4k14WoTqWJiXMxsXmOmaQRhvUGu-FvUGkGxe1Bq_4yqY5PqmlTWRcElntDlgtBXRw6Q_GEJD5mZkpBeQKXINqZ6spm104YWt90Jm6q_JWfKqXweQtxcncA7iQugE59v92JYBGqvYYw7ofwL)
+# [happy 2026 with buildings.prg](https://stigc.dk/c64/basic/?s=2jVVLj5swEL7zK2ajPYQNUW0Hk-AVlbo9VJWqHrqVeibgBGt5RIZ0yb_v2IaG0Gq1kUI8wzy-mfk8oQROzYsEvmE7EhDxV6BG0KruICv0_ZKGvoAbeet7jEAn--4-WTw8PMAX2cEPmeaXO0BxIY5Ne95DTIi3IXBoNHQJha4BSggRNfp5odNnCbUvGLSdPMGaepzMc4kJymyKMvOiEUXboXG2pv4k9dalyF3qcMy8I2B_43eXj-XGFFxgjoGxiiEt2Oq_y1d4kkdV16o-tnfACItAtVBILe9gDb9UW-AbWHiUjp72uVpcmjN0hYS9bDtQtT3XGO4iU31nHNjM4WfRm2rSshzNP0chpHUOT5-ev37G3jVHnVbVkG8zc8-aqjrXqlMScX5rfksTDEFoOKSVKi-I9lnlsKxInUsfwMTAUfUqoWJ_PuC44Z0fdJyNMvY9igPrE1QtdZ0vqf8QEl9cpgrK0Wo7jIYSFq4uaLTqg5ANE-Isjkbl1DFCR5ytG5MhmkdxxEdkZnov1AGfyWJhOlajjeEiJ8hiArLOkXQEtKxgf1ZlbobocZzUPm1lwkJRpX2RUOJx5hjV7xNi-raJRTHFbuz8FVIYu57muU4sfhPFot2LrCkTh_-q9PhwFS57R9TC1WkCBNgvJ6FngIH5ENg81iGxAfGLR49HjtcYx_IcUQotu7Oukek3g-D-Y3vKlgb4MiTrUtZLyw7f_8B8_9GeR1fTR9uZg9LytdEvrVFxqyrTc50VKNPxJoVYWhCJUdhusYCrtAtYSK5iFFAWG-_xajE7MzI0-ZAw22RzA-xuCK-um-Ag3CWmZHNNbkPuxE200ME_NScU-A1QyqdIydtAp8mZjcxnuKO3gWxHhunWwN5NrOfJyX-6tJtli8cuRbZLjHPXpei2S0OT4rk3ewsrHWbenlI7cLO1TDI1LHE2zTHhP4Lw_0Fu5jfLNYBit6DMrhpYx0bWtZluylJq1ND5MhEGknaQIrewXWRmKGSXVaXy-6U5BcxfWcGSO-hVQM1f2GaMaWweBW65Xq2oWRa9-ni9F25pmB2IPuGI8g8)
 ```basic
 10 poke 53280,0:poke 53281,0:print chr$(14): print chr$(147)
 20 text$="*** Get Ready! ***":gosub 900
@@ -73,9 +73,11 @@
 200 end
 500 rem buildings
 510 base=24:maxh=10
-520 for xb=0 to 39:h=int(rnd(1)*maxh)+1:for yb=0 to h-1
-530 poke 1024+(base-yb)*40+xb,160:poke 55296+(base-yb)*40+xb,1
-540 next:next:return
+520 for xb=0 to 39:h=int(rnd(1)*maxh)+1
+530 addr=1024+base*40+xb:col=55296+base*40+xb
+540 for yb=1 to h:poke addr,160:poke col,1
+550 addr=addr-40:col=col-40
+560 next yb:next xb:return
 900 print chr$(5);spc(int((40-len(text$))/2));text$:return
 1000 rem fireworks
 1005 rem launch
