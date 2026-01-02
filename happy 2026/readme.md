@@ -48,10 +48,10 @@
 2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
 2040 return
 ```
-# happy 2026 with buildings.prg
+# [happy 2026 with buildings.prg](https://stigc.dk/c64/basic/?s=2jVVLj5swEL7zKyZRDpAQ1TaPBFZU6u6hqlT10K3UMw8nWMsjMqQL_75jAw1hq9XmkDBmHt_M93lCCVzqFw6ew47EJuE_gypDiqqFNJcbk7pWCHf2wTIYgZZ37SZab7db-Mpb-MnjrF8BmuvwXDfXBAJCDIfAqZbQRhTaGighJKwwznCH8zSi-gWDpuUX2FPDI8ta4QxlOkeZGv6EomnROd1Ta1b6MJTIhtLuVPlIQP8GH24f2w0oDIk9TIxdjGVBd_-Dv8IjP4uqEtW5WQEjzAfRQM4lX8EefosmxzewNiidIvX3bt3XV2hzDglvWhCVfq4wXc9juVIBbBHwK-9UN3FRTO5PvgtxlcHjl-dvTzi7-izjshzrOYvwtC7LayVawRHn9_oPV8kQhIRTXIqiR7TPIgOzJFXGLQCVA6nqRETD5HpCuuGDHwxcUBlYBkXCugiPTFllJrW2LrHCfn5APfQ6jNRQwtxdj067znbZyJDHAn86nAf6GIjcDjQpoRkUKT6jMuNNKE74Ha3XamIV-igtegRVTIBXGYqOgOQlJFdRZIpEw0OmkrjhEXPDMu7yiBLDY4OiuiQiam5OEOZz7MrP2tFQ-fSjT64k7cz7MVXafZ9YuoXExpnMO3vz2vDcQbFavqHk7VVWqN674XrWQ3NJTQXGdMm-4JWpGbesT8yyHvTzFKpmo7s9Cclfa_nSqCNPHxXxtUpztOl0O1wEZfvhZBwOCPhmHW3mkpvp25QFKnq6LkzzQMbBnSKmh6JUre-7ewt17FM4XExKnFtxnfIY3mVzB_iX-oKGdweUenOk5H2g8-JMZ_YWuP33gRwm1chGwT7OvJfFyX-mdFxUC6Yp-XpKzPOGKfn3UxqHFCyj2XtY6ch5c4k14WoTqWJiXMxsXmOmaQRhvUGu-FvUGkGxe1Bq_4yqY5PqmlTWRcElntDlgtBXRw6Q_GEJD5mZkpBeQKXINqZ6spm104YWt90Jm6q_JWfKqXweQtxcncA7iQugE59v92JYBGqvYYw7ofwL)
 ```basic
-10 poke 53280,0:poke 53281,0:print chr$(147)
-20 text$="*** get ready! ***":gosub 900
+10 poke 53280,0:poke 53281,0:print chr$(14): print chr$(147)
+20 text$="*** Get Ready! ***":gosub 900
 30 for t=1 to 1000:next
 40 for c=11 to 2 step -1
 50 print chr$(147):poke 53280,c:poke 53281,c
@@ -60,28 +60,22 @@
 80 next
 90 poke 53280,0:poke 53281,0:print chr$(147)
 91 gosub 500
-100 text$= "*** new beginnings! 2026 is here - wishing "
+100 text$= "*** New Beginnings! 2026 is here! - Wishing "
 110 text$=text$+"you the best in the new year! "
-120 text$=text$+"thx to all in the c64 and basic programming "
-130 text$=text$+" communities! love to your family - sid (m0nde)   "
+120 text$=text$+"Thx to all in the C64 and BASIC programming "
+130 text$=text$+"communities! Love to your family - Sid (m0nde)   "
 140 xi=1:buf$="                                        "
 150 print chr$(19)
-160 x=int(rnd(1)*40):y=int(rnd(1)*10)
+160 x=int(rnd(1)*40):y=int(rnd(1)*15)
 170 poke 1024+y*40+x,42:poke 55296+y*40+x,int(rnd(1)*16)
 180 gosub 1000
 190 get a$:if a$="" then goto 150
 200 end
-500 rem buildings (WHITE on BLACK, no roof)
+500 rem buildings
 510 base=24:maxh=10
-520 for xb=0 to 39
-530 h=int(rnd(1)*maxh)+1
-540 for yb=0 to h-1
-550 addr=1024+(base-yb)*40+xb
-560 poke addr,160            : rem reverse space = solid
-570 poke 55296+(base-yb)*40+xb,1
-580 next yb
-590 next xb
-600 return
+520 for xb=0 to 39:h=int(rnd(1)*maxh)+1:for yb=0 to h-1
+530 poke 1024+(base-yb)*40+xb,160:poke 55296+(base-yb)*40+xb,1
+540 next:next:return
 900 print chr$(5);spc(int((40-len(text$))/2));text$:return
 1000 rem fireworks
 1005 rem launch
@@ -105,7 +99,7 @@
 1021 gosub 2000
 1130 return
 2000 rem scroller
-2010 print chr$(19):for r=1 to 11:print:next
+2010 print chr$(19):for r=1 to 6:print:next
 2020 buf$=mid$(buf$,2)+mid$(text$,xi,1)
 2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
 2040 return
