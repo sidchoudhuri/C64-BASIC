@@ -1,4 +1,4 @@
-```
+```basic
 *** USEFUL COMMODORE 64 POKEs and PEEKs ***
 Compiled from Usenet postings, magazinge articles and
 other Commodore Users by: Paul Panks (dunric@gmail.com)
