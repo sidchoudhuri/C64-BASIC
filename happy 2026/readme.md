@@ -48,3 +48,65 @@
 2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
 2040 return
 ```
+# happy 2026 with buildings.prg
+```basic
+10 poke 53280,0:poke 53281,0:print chr$(147)
+20 text$="*** get ready! ***":gosub 900
+30 for t=1 to 1000:next
+40 for c=11 to 2 step -1
+50 print chr$(147):poke 53280,c:poke 53281,c
+60 text$=str$(c-1):gosub 900
+70 for d=1 to 400:next
+80 next
+90 poke 53280,0:poke 53281,0:print chr$(147)
+91 gosub 500
+100 text$= "*** new beginnings! 2026 is here - wishing "
+110 text$=text$+"you the best in the new year! "
+120 text$=text$+"thx to all in the c64 and basic programming "
+130 text$=text$+" communities! love to your family - sid (m0nde)   "
+140 xi=1:buf$="                                        "
+150 print chr$(19)
+160 x=int(rnd(1)*40):y=int(rnd(1)*10)
+170 poke 1024+y*40+x,42:poke 55296+y*40+x,int(rnd(1)*16)
+180 gosub 1000
+190 get a$:if a$="" then goto 150
+200 end
+500 rem buildings (WHITE on BLACK, no roof)
+510 base=24:maxh=10
+520 for xb=0 to 39
+530 h=int(rnd(1)*maxh)+1
+540 for yb=0 to h-1
+550 addr=1024+(base-yb)*40+xb
+560 poke addr,160            : rem reverse space = solid
+570 poke 55296+(base-yb)*40+xb,1
+580 next yb
+590 next xb
+600 return
+900 print chr$(5);spc(int((40-len(text$))/2));text$:return
+1000 rem fireworks
+1005 rem launch
+1010 poke 54296,6:poke 54277,16:poke 54278,240:poke 54276,129
+1011 gosub 2000
+1020 for f=20 to 120 step 4:poke 54273,f: next
+1030 poke 54276,128:gosub 2000
+1040 rem pop
+1050 poke 54296,15:poke 54277,0:poke 54278,240:poke 54276,129:poke 54273,200
+1051 gosub 2000
+1060 poke 54276,128:gosub 2000
+1070 rem burst
+1080 poke 54277,0:poke 54278,200:poke 54276,129
+1081 gosub 2000
+1090 for f=60 to 255 step 6:poke 54273,f:next
+1091 gosub 2000
+1092 poke 54276,128:gosub 2000
+1100 rem sparks
+1110 for i=1 to 12:poke 54273,int(rnd(1)*255):poke 54276,129
+1120 poke 54276,128:next
+1021 gosub 2000
+1130 return
+2000 rem scroller
+2010 print chr$(19):for r=1 to 11:print:next
+2020 buf$=mid$(buf$,2)+mid$(text$,xi,1)
+2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
+2040 return
+```
