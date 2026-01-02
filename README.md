@@ -1,5 +1,7 @@
 # C64-BASIC
 Learning C64 BASIC
+- [useful pokes](useful_pokes.md)
+
 - [glitch](/glitch/readme.md)
 - [horse](/horse/readme.md)
 - [raindrops](/raindrops/readme.md)
