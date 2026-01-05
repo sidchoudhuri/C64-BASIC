@@ -106,7 +106,7 @@
 2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
 2040 return
 ```
-# [happy 2026 multistage.prg](https://stigc.dk/c64/basic/?s=2jVVLj5swEL7zK2ajPYQNUW0Hk-AVlbo9VJWqHrqVeibgBGt5RIZ0yb_v2IaG0Gq1kUI8wzy-mfk8oQROzYsEvmE7EhDxV6BG0KruICv0_ZKGvoAbeet7jEAn--4-WTw8PMAX2cEPmeaXO0BxIY5Ne95DTIi3IXBoNHQJha4BSggRNfp5odNnCbUvGLSdPMGaepzMc4kJymyKMvOiEUXboXG2pv4k9dalyF3qcMy8I2B_43eXj-XGFFxgjoGxiiEt2Oq_y1d4kkdV16o-tnfACItAtVBILe9gDb9UW-AbWHiUjp72uVpcmjN0hYS9bDtQtT3XGO4iU31nHNjM4WfRm2rSshzNP0chpHUOT5-ev37G3jVHnVbVkG8zc8-aqjrXqlMScX5rfksTDEFoOKSVKi-I9lnlsKxInUsfwMTAUfUqoWJ_PuC44Z0fdJyNMvY9igPrE1QtdZ0vqf8QEl9cpgrK0Wo7jIYSFq4uaLTqg5ANE-Isjkbl1DFCR5ytG5MhmkdxxEdkZnov1AGfyWJhOlajjeEiJ8hiArLOkXQEtKxgf1ZlbobocZzUPm1lwkJRpX2RUOJx5hjV7xNi-raJRTHFbuz8FVIYu57muU4sfhPFot2LrCkTh_-q9PhwFS57R9TC1WkCBNgvJ6FngIH5ENg81iGxAfGLR49HjtcYx_IcUQotu7Oukek3g-D-Y3vKlgb4MiTrUtZLyw7f_8B8_9GeR1fTR9uZg9LytdEvrVFxqyrTc50VKNPxJoVYWhCJUdhusYCrtAtYSK5iFFAWG-_xajE7MzI0-ZAw22RzA-xuCK-um-Ag3CWmZHNNbkPuxE200ME_NScU-A1QyqdIydtAp8mZjcxnuKO3gWxHhunWwN5NrOfJyX-6tJtli8cuRbZLjHPXpei2S0OT4rk3ewsrHWbenlI7cLO1TDI1LHE2zTHhP4Lw_0Fu5jfLNYBit6DMrhpYx0bWtZluylJq1ND5MhEGknaQIrewXWRmKGSXVaXy-6U5BcxfWcGSO-hVQM1f2GaMaWweBW65Xq2oWRa9-ni9F25pmB2IPuGI8g8)
+# [happy 2026 multistage.prg](https://stigc.dk/c64/basic/?s=2lVZtb6M4EP7Or3CjfghN0PkFSKBLpbb70uqqPand3n6G4CRcE6iAXOHf34yNG6Ddaq9SE3vseXue8UwYJc_FkySe4Es6p-HrhuGmzPKarLbl6ZS5dkgG-4VtcUpq2dSn0eTs7Ix8kzW5l3HanhDYTsJNUR0SElBqCUrWRUnqiJG6IIxSGuagZ7lavoqYOuCkquUzcZjl0bGvsBflqh_lyvJNFFUNl1cOs3uuF9pFql27xvOSEvUd_Hb6kG7AiDbsgWHIonNLVPbf5Qu5kpssz7N8U50QTrlPsopsZSlPiEN-ZtUWTsjEYsxoqs_ZpC0OpN5KksiqJlmu1jmYa2VcnqACHyn82DaYTbzbmevXvkviPCVXlw-314BdsSnj_b7zJ0bqq2K_P-RZnUmI8674V6IxCKIk63if7VqI9iFLyXRP81TahKANoKrJIhYmhzXQTX7zDxRHVAa2xYCwUu5JE4F4WubplNlnLrXDti9gHtxc6JuKFUa5O2vh4qyZu7xjyuOBb4R9ZR-VvY4uQZGvpbalRUyJgP0NFG18GmZr-IwmEwQzhztYph6FAqdE5inUo1ZODtkuRX4tD0hM4kpG3A33cbONGLU8routSSKKkIog3PZTwnv2DKobCInTtIxUSmhFJZCEq2IX6ZSOQsvrXkmb6Bre6tTRwByg1DvQnINhrzOMH45LlUH4h6Xl-brkwY56AhBlWMr6UObwCAYcefZ59byaYuBTlzo7mU9V4dj2H9y2z9XaqCKOCpl1VsqXonyqUOQp0S4-5Kst7Jl5ZC6kNvdDs1ksIIHjbjnnLj1u_TnjAWqbV8cVZ7QDeR1xBTI-DtU23KOqmK9D_b4ZFUfnyuQyHFhzTYU9w8YbBMq8fqT040D7zrmy7I3i9j8OZGEqrKww7GXv9tg5fQel5chbYFDyFUrc8zRK_hClDqRgrM0_ipV1nFfPsSIcGxo6y7r-zvs-evUPQdhvIkf-Rr66oPgwKGxjXdVxU3XVqix2O1mChI37TIghlTokX_dybZljCak-ts_S0ymu5tyeqY0q7nmTzRlON2Fs4p3zEBpgk80YNosmuzi-C900sD2CjvsapSVMmFEUkb9vHx4v78jX2_svP_-6_5NMb26_3ZCrx_uHHzZewOusK8Zs9dS9HiAtLms4gpAH_VIssZMIDLGFHvRu9w2VtX8OMFXiBNv8sX0JjDMdWrQdNIhvQMZPg1bMwNfRoGyed0WK46p-kZB4WbxUxHcYzvlh0QvatXrHccjd5eP36xtcgnwxqJhp66BPGw6W_daoGztIzZhWTc_llsASfDsBFngwjMDUZvcDgOv5T1I44X2jAo0qMFuHhU3UzFJwjGMP2f7EOo6BYoEjDYUXYmmkYonikWfTcDOg1kwyBEJxrnHAoXQcSO-x93D7mewPuzqDQthIUhUHGEegGAwA5OAfZ1WCgfeYC2zHhROcVZBY_2RhOwJOuEolaT5RAtYSyClQi7YTtBeM9Wai4D5kxofzS4GfAFrQFUc0cW9Ak7k6HtVwb4gd72PHFyMKXzm08FfbK65fLz9_0bDyt-iIX6IjfomO-L_oCERHmIkzQEcVGPgapCn6aYqF6Rz_AQ)
 ```basic
 10 poke 53280,0:poke 53281,0:print chr$(14): print chr$(147)
 20 text$="*** Get Ready! ***":gosub 900
@@ -124,9 +124,10 @@
 130 text$=text$+"communities! Love to your family - Sid (m0nde)   "
 140 xi=1:buf$="                                        "
 150 print chr$(19)
-160 x=int(rnd(1)*40):y=int(rnd(1)*15)
-170 poke 1024+y*40+x,42:poke 55296+y*40+x,int(rnd(1)*16)
-180 gosub 1000
+160 rem x=int(rnd(1)*40):y=int(rnd(1)*15)
+170 rem poke 1024+y*40+x,42:poke 55296+y*40+x,int(rnd(1)*16)
+175 gosub 3000
+180 rem gosub 1000
 190 get a$:if a$="" then goto 150
 200 end
 500 rem buildings
@@ -163,4 +164,52 @@
 2020 buf$=mid$(buf$,2)+mid$(text$,xi,1)
 2030 print buf$;:xi=xi+1:if xi>len(text$) then xi=1
 2040 return
+
+3000 rem === VISUAL FIREWORK (HIGH BURST) ===
+
+3010 rem pick launch start
+3020 x=int(rnd(1)*38)+1
+3030 y=24                     : rem just above buildings
+3040 dx=int(rnd(1)*3)-1
+3050 peak=int(rnd(1)*11)+1    : rem explode between rows 6-10
+3051 gosub 2000
+3060 rem --- LAUNCH ---
+3070 for i=1 to (y-peak)
+3080 addr=1024+y*40+x
+3090 poke addr,42
+3100 poke 55296+y*40+x,7
+3101 gosub 2000
+3110 for d=1 to 20:next d
+3120 poke addr,32
+3130 y=y-1:x=x+dx
+3140 if x<1 then x=1
+3150 if x>38 then x=38
+3151 gosub 2000
+3160 next i
+
+3170 rem --- BURST ---
+3180 gosub 1000              : rem SID multistage sound
+
+3190 for i=1 to 28
+3200 bx=x+int(rnd(1)*9)-4
+3210 by=y+int(rnd(1)*7)-3
+3220 if bx<0 or bx>39 or by<0 or by>11 then goto 3260
+3230 addr=1024+by*40+bx
+3240 poke addr,42
+3250 poke 55296+by*40+bx,int(rnd(1)*16)
+3251 gosub 2000
+3260 next i
+
+3270 for d=1 to 200:next d
+
+3280 rem --- FADE ---
+3290 for i=1 to 28
+3300 bx=x+int(rnd(1)*9)-4
+3310 by=y+int(rnd(1)*7)-3
+3320 if bx<0 or bx>39 or by<0 or by>11 then goto 3360
+3330 poke 1024+by*40+bx,32
+3331 gosub 2000
+3360 next i
+
+3370 return
 ```
