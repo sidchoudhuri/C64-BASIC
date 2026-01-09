@@ -84,3 +84,24 @@ Visitors: click links to run code in online emulator
 180 NEXT Y
 190 GOTO 100
 ```
+# [plasma with machine language stub](https://stigc.dk/c64/basic/?s=%3Chtml%3E%3Chead%3E%3Ctitle%3E415%20Unsupported%20Media%20Type%3C/title%3E%3C/head%3E%3Cbody%3E%3Ccenter%3E%3Ch1%3E415%20Unsupported%20Media%20Type%3C/h1%3E%3C/center%3E%3Chr%3E%3Ccenter%3Eopenresty/1.27.1.1%3C/center%3E%3C/body%3E%3C/html%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E)
+```basic
+10 POKE 53280,0:POKE 53281,0:POKE 646,1:PRINT CHR$(147)
+20 DIM S(255):PRINT "GENERATING SINE TABLE..."
+30 FOR I=0 TO 255:S(I)=INT(8+7*SIN(I*0.0245)):NEXT
+40 PRINT "LOADING MACHINE CODE..."
+50 C=0:FOR I=49152 TO 49201:READ D:POKE I,D:C=C+D:NEXT
+60 IF C<>4775 THEN PRINT "CHECKSUM ERROR!":PRINT "GOT:";C;" NEED: 4775":END
+70 PRINT "BUILDING PLASMA..."
+80 FOR Y=0 TO 24:FOR X=0 TO 39
+90 C=(S((X*8) AND 255)+S((Y*12) AND 255)) AND 15
+100 POKE 1024+Y*40+X,81:POKE 55296+Y*40+X,C
+110 NEXT:NEXT
+120 REM PRINT "READY! PRESS SPACE TO START"
+130 REM GET A$:IF A$<>" " THEN 130
+200 SYS 49152:GOTO 200
+
+500 DATA 162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
+510 DATA 157,0,217, 189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
+520 DATA 41,15,157,0,219,232,208,209,96
+```
