@@ -84,7 +84,7 @@ Visitors: click links to run code in online emulator
 180 NEXT Y
 190 GOTO 100
 ```
-# [plasma with machine language stub](https://stigc.dk/c64/basic/?s=%3Chtml%3E%3Chead%3E%3Ctitle%3E415%20Unsupported%20Media%20Type%3C/title%3E%3C/head%3E%3Cbody%3E%3Ccenter%3E%3Ch1%3E415%20Unsupported%20Media%20Type%3C/h1%3E%3C/center%3E%3Chr%3E%3Ccenter%3Eopenresty/1.27.1.1%3C/center%3E%3C/body%3E%3C/html%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E%3C!--%20a%20padding%20to%20disable%20MSIE%20and%20Chrome%20friendly%20error%20page%20--%3E)
+# [plasma with machine language stub](https://stigc.dk/c64/basic/?s=2dVLbbqswEHz3V2xRHoBY0a5jc3GbSq5xE9QEIuxKyf__SE0MOTqV-gLsenY8MwshXMcvB2ovGuSonwWtRSUrTvo69UMAe5o2Ocm6YAKh6y_gc6FUsZxmRze4yYR-OILvBwfBfJzdbrfL2B7hc5ygPyCEEeKM9nlfHOJU3mzrMqLzvsQdCqmKQg_uFpiMyhLteTTdzHkx9jTT2rFLrArBHlAnZtmSEjO7bAWSnpzpoEsWet5pe7DbLjFXCP0n2Ld3WdcKwskN60325OyX_76Am6Zxesmexsags1f7msHgXKdhHsy0GzpWP1V-fPfnh8zr2fiLeQhsku37Yls-pN5StW9ZO-vPfZ7fyqYAM3RzMsU2Nu4liX-d9EWKES7ropjU9l5K3N54Q8vWlGirtWkZEcJsN3mmuLDJXVaxczr3l1g578FfjXWzJB_MFDJG-4Q9ugBmo2NWZvP2nkGWsorHcf0I_u7hEbqO8UR3iCxuJP4XJhigSnDk1LTxKajiQnJCxYlL4hTfql4OVkj9C8IUrVQLtuawgpu_-JonX_uEMCUWpv-xEbEXXGAkw5a31Q8) - optimized by Claude
 ```basic
 10 POKE 53280,0:POKE 53281,0:POKE 646,1:PRINT CHR$(147)
 20 DIM S(255):PRINT "GENERATING SINE TABLE..."
