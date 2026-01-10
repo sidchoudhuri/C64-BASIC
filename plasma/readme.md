@@ -73,7 +73,7 @@ Visitors: click links to run code in online emulator
 180 NEXT Y
 190 GOTO 100
 ```
-# [plasma with machine language stub](https://stigc.dk/c64/basic/?s=2dVLbbqswEHz3V2xRHoBY0a5jc3GbSq5xE9QEIuxKyf__SE0MOTqV-gLsenY8MwshXMcvB2ovGuSonwWtRSUrTvo69UMAe5o2Ocm6YAKh6y_gc6FUsZxmRze4yYR-OILvBwfBfJzdbrfL2B7hc5ygPyCEEeKM9nlfHOJU3mzrMqLzvsQdCqmKQg_uFpiMyhLteTTdzHkx9jTT2rFLrArBHlAnZtmSEjO7bAWSnpzpoEsWet5pe7DbLjFXCP0n2Ld3WdcKwskN60325OyX_76Am6Zxesmexsags1f7msHgXKdhHsy0GzpWP1V-fPfnh8zr2fiLeQhsku37Yls-pN5StW9ZO-vPfZ7fyqYAM3RzMsU2Nu4liX-d9EWKES7ropjU9l5K3N54Q8vWlGirtWkZEcJsN3mmuLDJXVaxczr3l1g578FfjXWzJB_MFDJG-4Q9ugBmo2NWZvP2nkGWsorHcf0I_u7hEbqO8UR3iCxuJP4XJhigSnDk1LTxKajiQnJCxYlL4hTfql4OVkj9C8IUrVQLtuawgpu_-JonX_uEMCUWpv-xEbEXXGAkw5a31Q8) - optimized by Claude
+# [plasma with machine language stub](https://stigc.dk/c64/basic/?s=2dVLbbqswEHz3V2xRHoBY0a5jc3GbSq5xE9QEIuxKyf__SE0MOTqV-gLsenY8MwshXMcvB2ovGuSonwWtRSUrTvo69UMAe5o2Ocm6YAKh6y_gc6FUsZxmRze4yYR-OILvBwfBfJzdbrfL2B7hc5ygPyCEEeKM9nlfHOJU3mzrMqLzvsQdCqmKQg_uFpiMyhLteTTdzHkx9jTT2rFLrArBHlAnZtmSEjO7bAWSnpzpoEsWet5pe7DbLjFXCP0n2Ld3WdcKwskN60325OyX_76Am6Zxesmexsags1f7msHgXKdhHsy0GzpWP1V-fPfnh8zr2fiLeQhsku37Yls-pN5StW9ZO-vPfZ7fyqYAM3RzMsU2Nu4liX-d9EWKES7ropjU9l5K3N54Q8vWlGirtWkZEcJsN3mmuLDJXVaxczr3l1g578FfjXWzJB_MFDJG-4Q9ugBmo2NWZvP2nkGWsorHcf0I_u7hEbqO8UR3iCxuJP4XJhigSnDk1LTxKajiQnJCxYlL4hTfql4OVkj9C8IUrVQLtuawgpu_-JonX_uEMCUWpv-xEbEXXGAkw5a31Q8) - optimized by Gemini
 ```basic
 10 POKE 53280,0:POKE 53281,0:POKE 646,1:PRINT CHR$(147)
 20 DIM S(255):PRINT "GENERATING SINE TABLE..."
@@ -94,7 +94,7 @@ Visitors: click links to run code in online emulator
 510 DATA 157,0,217, 189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
 520 DATA 41,15,157,0,219,232,208,209,96
 ```
-# [simple plasma](https://stigc.dk/c64/basic/?s=2RZDLboQwDEX3-Qpr1EUCiNohCQ-JBYJ0Gs0MIGABy35BR1318xte012uc319bELou5sFncgMIyxegk5hlImo6AfXTlB_Dm-cVCqYRGjcA0YutRbH7-VqWztUk2uvcRxfWILw0Q3gSoSpA28sRu5E6a08C9NgdC13AcYolRaiaO08QTHYB5hYZu9SG_h6Pn--f2FzMLWnLUeaKlY17yrJmUaoSz5yPgeZgKpt1oEi9IUlIPlf2V-kmTk2J58eLoHCcI4yOg6gZW7OYs1ShJVuQ2SECCvlUPWugbq7e4x6qe-WEZ0Lb_0rmDYy14zkMctFvLf25q8Q0guEkiP-2vkOH_IH) - optimized by claude
+# [simple plasma](https://stigc.dk/c64/basic/?s=2RZDLboQwDEX3-Qpr1EUCiNohCQ-JBYJ0Gs0MIGABy35BR1318xte012uc319bELou5sFncgMIyxegk5hlImo6AfXTlB_Dm-cVCqYRGjcA0YutRbH7-VqWztUk2uvcRxfWILw0Q3gSoSpA28sRu5E6a08C9NgdC13AcYolRaiaO08QTHYB5hYZu9SG_h6Pn--f2FzMLWnLUeaKlY17yrJmUaoSz5yPgeZgKpt1oEi9IUlIPlf2V-kmTk2J58eLoHCcI4yOg6gZW7OYs1ShJVuQ2SECCvlUPWugbq7e4x6qe-WEZ0Lb_0rmDYy14zkMctFvLf25q8Q0guEkiP-2vkOH_IH) - optimized by Gemini
 ```basic
 10 POKE 53280,0:POKE 53281,0:POKE 646,1:PRINT CHR$(147)
 20 DIM S(255):PRINT "GENERATING..."
