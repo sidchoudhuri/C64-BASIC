@@ -2,23 +2,23 @@ Visitors: click links to run code in online emulator
 
 # [plasma with color cycling showing color codes](https://stigc.dk/c64/basic/?s=2fZDBboMwEETv_opV1IMNFO06dgJIVCKOE6wQQEAl-P8fqakhai69eWa9s09DCH33sKCPMsMEi5egXZzUKaGiH1w7gamHD07qLJhEuLonjFxqLbbp4fLtmqtr7zC61sJUXRqbpumBHRFu3QCuRJg68BvFyJ0o_Q7P4nPkf3MXYYpSaSGK1s4TI0QY7BN-I6FvqvFZMaIQtGxBqljVHNQxZ-SpTMlHzucoE1C11_WYiL2x_DXCizQjT1aXKotN4W5gvnKYatt6y3z6NLV3o2V-ipdIYTwnJrRCHna3akYaYcUO7HJjN4tp7M4u6a2EPM-ZDLi9tQ8ebjgR0wtO_gcn3-HcG5fzSHJHundrVYQ_)
 ```basic
-10 POKE 53280,0:POKE 53281,0:POKE 646,1:PRINT CHR$(147)
-20 DIM S(255):PRINT "BUILDING SINE TABLE..."
-30 FOR I=0 TO 255:S(I)=INT(8+7*SIN(I*0.0245)):NEXT
+10 poke 53280,0:poke 53281,0:poke 646,1:print chr$(147)
+20 dim s(255):print "building sine table..."
+30 for i=0 to 255:s(i)=int(8+7*sin(i*0.0245)):next
 
-100 REM BUILD PLASMA
-110 FOR Y=0 TO 24:FOR X=0 TO 39
-120 C=(S((X*8) AND 255)+S((Y*8) AND 255)) AND 15
-130 H=48+C:IF C>9 THEN H=C-9
-140 POKE 55296+Y*40+X,C:POKE 1024+Y*40+X,H
-150 NEXT:NEXT
+100 rem build plasma
+110 for y=0 to 24:for x=0 to 39
+120 c=(s((x*8) and 255)+s((y*8) and 255)) and 15
+130 h=48+c:if c>9 then h=c-9
+140 poke 55296+y*40+x,c:poke 1024+y*40+x,h
+150 next:next
 
-200 REM CYCLE PLASMA
-210 FOR I=0 TO 999
-220 C=(PEEK(55296+I)+1) AND 15
-230 H=48+C:IF C>9 THEN H=C-9
-240 POKE 55296+I,C:POKE 1024+I,H
-250 NEXT:GOTO 210
+200 rem cycle plasma
+210 for i=0 to 999
+220 c=(peek(55296+i)+1) and 15
+230 h=48+c:if c>9 then h=c-9
+240 poke 55296+i,c:poke 1024+i,h
+250 next:goto 210
 ```
 # [plasma with color cycling - no color codes](https://stigc.dk/c64/basic/?s=2ZZHdbqNADIXv_RRWtNJCIO14hiFAy0rJZJqMSiACIiWXVdu7qJG6f-rb1wS6pdobND62jz8bErir7i1qJRMRiqwLujcN7ziKQ8o-SuYylBzVrmzRbOpvHkVzH6TA2m5xuXfFChtXWmwXy8KCYu9L6eSScuV6lJ3cQCRw5bbYeFJrH7TAu6pGlwtsK2QJYsE55-ds4SXBfMrNnpvGVzJRlFxLHfv-wDK5Yru5wNIe2v_wgMQYcFcsmu0CiPp5x2FelHXRoY9UCsRbmbzxvMM08XFRrjokP2DhOBaAeEtTFbnWMo2D4zQSwSFrTJ2TkNEQA_Gq66rZL1EJAaSHo3NfaPrjckeYUHbhPL-c3vDp9eEvnv88nIDiYbHuA3ztfhtzNIX92EbSl-ulaQpSjsHcJ5PLTL6z9t7jrB8QSDWGk9EXuG7SP8ANzmb4dH75_gsf3x5Pz8h4v59_gtQD4brqTsku_O97Sm6ztmSzlW1AMaW7Q_ODNLabTs7NjGJQstdvOX_RN3mUBAaUGurzz4SZpaCizrzd1-U7)
 ```basic
