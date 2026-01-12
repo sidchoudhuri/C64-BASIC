@@ -23,7 +23,7 @@
 170 poke 646,3
 180 print "os:      commodore basic v2"
 190 print "host:    c64 breadbin"
-200 print "kernel:  mos 6510 @ ~1 mhz"
+200 print "kernel:  mos 6510 @ 1 mhz"
 210 gosub 1000: print "uptime: ";uptime$
 220 print "shell:   basic"
 230 print "resolution: 320x200"
