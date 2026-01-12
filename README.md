@@ -9,3 +9,4 @@
 - [hires oval](/oval/readme.md)
 - [happy new year 2026](/happy%202026/readme.md)
 - [plasma](/plasma/readme.md)
+- [neofetch](/neofetch/readme.md)
