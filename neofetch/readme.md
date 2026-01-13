@@ -1,11 +1,9 @@
-# [neofetch](https://stigc.dk/c64/basic/?s=2hVTLbtswELzzKxZsDlasoHxItKzARX9FtuiIiCUaIh00_fouRb2cGi0vEndml7PDBTmDq33XkEtRsJSV84aHTW86D6emf9rwbJcQMZJVplKeESIZ9LqFk21bW9tew8W-WSILWCVKnlDA9W1YFIjcjzCdoyGcsSUcQrBCSb6AEzYVJGrGZggisrtDKCkeMOkgUhRJ5EySyf7BiffcNZuzB-q_0u_4_KEJnIlVfG6RM7m2NI-O3q3lDlSGCdnqpnLCF_9e_rkoIVzFS3WfzuPHdGdL-G5VThK-GGld-fX8Y-XMCT4EqlhMbKzzA_OkMjj2uqqPpqM4UDPjXfdddUFOax2onDP4CRza5jeycPNm3e0I6DMrp4zb1ZtWl0Bf498TEWIu5xp9CdWiHKwhZ6jXzl5u3tiuBCnYLxSBeDadIdZnfJha21CGvg6_eEY-EeWa6OytqyPRmRppy1i2urX9Z9BZHd3m3OsNS5JXevz02gFuNZ6OBuuuJmGQov2xpTAoDDwcwBv4DoqFCWHQYABLbzzGpGIsDBT2145hjL9A8zwgQ1bAsT83p00w_rTPEce2RhuR1Zu3xj9tKKNb53HimiQVyZaWdPsVaScES6h1ifHvrwQXEpC8C336W9-RMAWx6cFiqLXXp3A9CGD3Z9uDOaALFlQZJgeq-Eple0zcmrQqO_3LIxmdwamNcdyiI_HODrTz7kRLc4ar1u-bQCiSH3h_4BvdzaxrdQkjmc3KRHClrnwFfCdTXqSYhw8fTzm-f3uR7lV4A0fxeO0r6fI_0nkuFulykY5x3KL0MEUHGoqqvOBr8VxlyWGUvrCKvMAxliv18k69yFPBxaC-GMX_AQ)
+# [neofetch](https://stigc.dk/c64/basic/?s=2hVTbctsgEH3nK3ZoHqxYmXKRsKyOO_0V2cKRJpbwCJxJ-vVddAOnnpYXi91zlrNnwZzB1bxpyKUoWMrKdcP9Zmh7B6dmeNrwbJcQwWDQHZxM15naDBou5tUQiSUCUPKEAq5v46JAZD6n6Rr14YyFsA9BlCV5SC65pSBRa25NwZTZ3WUoKR4g6ShSFMmEWSST_YMT77ExmrMH6r_CYzxnD03gIo6vLfJ7S_PJ0XEF71WGwPwOyHOZ0Jd_LkoIV9MY7ad1-NP2Z0P4br4HKlOpJDxYZ2wZO4dagoRjZdsTvAs6n77HToORjbGuvGeqDI6Drupj20ccEdx800NfXcqI0xkLKkf_fgGHrvkd8zD6auztCDgPVi41blfXdrpcS0z7p4gXXLeNvvjjwnljT_Eh6yzooK253Fxr-lCcSsE-sIGYkS2yRCzrva21iY8aA7GsfOHJmGfNra9jnm3rmBXeQ6c7M3wGbdXRbs6D3rAk-UGPn05bwK2OpeLYdV8Tf6GnSzGZhXv01sEBXAvfQTEMoGkNBvCkjcOYVIz5h4D2dHMY4y_QPI-ZkeXzaIZdaUsaP7rnKY9NzwNC1NC-Nu5pQxndWocimyQVyZaWdPs10y0ZLKHiEvPXXwTrCQje-T7dbeiJv3dT0-MkoNZOn_x0MYHdn80A7QFdMKBKf2mhmv4dsz0St21alb3-cAhGZ_AtTXHcoiPTaA-0d_ZEy_YMV63fNh5QJD9xuuAa3a-oa3WhyMtWZcK7UleuAr6TKS9S5KU84ylXKd-LdK8IkYt4vA6RdPkf6TwXQboM0jGOW5Tub9eB-qIqL3gsnqssOczSA6rIC0aRGtTLO_UiTwUXo_piFv8H)
 ```basic
 10 poke 53280,0:poke 53281,0:print chr$(147)
-20 poke 646,14
-
-30 rem commodore logo
-38 print chr$(31)"    ######" 
-39 print "   #######" 
+20 rem commodore logo
+30 print chr$(31)"    ######" 
+35 print "   #######" 
 40 print "  ####    #######"
 50 print " ####     ######"
 60 print "####      ####"
@@ -13,23 +11,22 @@
 80 print "####      "chr$(28)"####"chr$(31)
 90 print " ####     "chr$(28)"######"chr$(31)
 100 print "  ####    "chr$(28)"#######"chr$(31)
-101 print "   #######" 
-102 print "    ######"
-103 print chr$(5)"                 commodore 64"
-140 poke 646,5
-150 print "------------------------------"
+110 print "   #######" 
+120 print "    ######"
+130 print chr$(5)"         commodore 64"
+150 print chr$(153)"------------------------------"
 
 160 rem system info
 170 poke 646,3
-180 print "os:      commodore basic v2"
-190 print "host:    c64 breadbin"
-200 print "kernal:  mos 6510 @ 1 mhz"
-210 gosub 1000: print "uptime: ";uptime$
-220 print "shell:   basic"
-230 print "resolution: 320x200"
-240 gosub 2000: print "video:   ";video$
-250 gosub 3000: print "sound:   ";sid$
-260 print "memory: ";abs(fre(0));"bytes free"
+180 print "os:      "chr$(5)"commodore basic v2"chr$(159)
+190 print "host:    "chr$(5)"c64 breadbin"chr$(159)
+200 print "kernal:  "chr$(5)"mos 6510 @ 1 mhz"chr$(159)
+210 gosub 1000: print "uptime: "chr$(5)uptime$chr$(159)
+220 print "shell:   "chr$(5)"basic"chr$(159)
+230 print "resolution: "chr$(5)"320x200"chr$(159)
+240 gosub 2000: print "video:   "chr$(5)video$chr$(159)
+250 gosub 3000: print "sound:   "chr$(5)sid$chr$(159)
+260 print "memory: "chr$(5)abs(fre(0));"bytes free"chr$(159)
 270 end
 
 1000 rem uptime
