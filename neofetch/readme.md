@@ -1,4 +1,4 @@
-# [neofetch](https://stigc.dk/c64/basic/?s=2hVTLbtswELzzKxZsDlasoHxItKzARX9FtuiIiCUaIh00_fouRb2cGi0vEndml7PDBTmDq33XkEtRsJSV84aHTW86D6emf9rwbJcQMZJVplKeESIZ9LqFk21bW9tew8W-WSILWCVKnlDA9W1YFIjcjzCdoyGcsSUcQrBCSb6AEzYVJGrGZggisrtDKCkeMOkgUhRJ5EySyf7BiffcFZmzB-K_sO_5_KEHnIlVfO6QM7l2NI-G3q3lClSGCdnqonLCF_te_rkoIVzFO3WfzuPHdGdL-G5VThK--Ghd-fX8Y-XMCT4Eqlg8bKzzA_OkMjj2uqqPpqM4TzPjXfedviCntQ5Uzhn8BA5t8xtZuHmz7nYE9JmVU8bt6k2rS6Cv8e-JCDGXc42-hGpRDtaQM9RrZy83b2xXghTsF4pAPJvOEOszPkytbShDX4dfPCOfiHJNdPbW1ZHoTI20ZSpb3dr-M-isjm5z7vWGJckrPX567QC3Gk9Hg3VXkzBI0f7YUhgUBh4O4A18B8XChDBoMIClNx5jUjEWBgr7a8cwxl-geR6QISvg2J-b0yYYf9rniGNbo43I6s1b4582lNGt8zhxTZKKZEtLuv2KtBOCJdS6xPj3V4ILCUjehT79re9ImILY9GAx1NrrU7geBLD7s-3BHNAFC6oMkwNVfKSyPSZuTVqVnf7lkYzO4NTGOG7RkXhnB9p5d6KlOcNV6_dNIBTJD7w_8I3uZta1uoSRzGZlIrhSV74CvpMpL1LMw3ePpxyfv71I9yo8gaN4vPaVdPkf6TwXi3S5SMc4blF6mKIDDUVVXvC1eK6y5DBKX1hFXuAYy5V6eade5KngYlBfjOL_AA)
+# [neofetch](https://stigc.dk/c64/basic/?s=2hVTLbtswELzzKxZsDlasoHxItKzARX9FtuiIiCUaIh00_fouRb2cGi0vEndml7PDBTmDq33XkEtRsJSV84aHTW86D6emf9rwbJcQMZJVplKeESIZ9LqFk21bW9tew8W-WSILWCVKnlDA9W1YFIjcjzCdoyGcsSUcQrBCSb6AEzYVJGrGZggisrtDKCkeMOkgUhRJ5EySyf7BiffcNZuzB-q_0u_4_KEJnIlVfG6RM7m2NI-O3q3lDlSGCdnqpnLCF_9e_rkoIVzFS3WfzuPHdGdL-G5VThK-GGld-fX8Y-XMCT4EqlhMbKzzA_OkMjj2uqqPpqM4UDPjXfedviCntQ5Uzhn8BA5t8xtZuHmz7nYE9JmVU8bt6k2rS6Cv8e-JCDGXc42-hGpRDtaQM9RrZy83b2xXghTsF4pAPJvOEOszPkytbShDX4dfPCOfiHJNdPbW1ZHoTI20ZSxb3dr-M-isjm5z7vWGJckrPX567QC3Gk9Hg3VXkzBI0f7YUhgUBh4O4A18B8XChDBoMIClNx5jUjEWBgr7a8cwxl-geR6QISvg2J-b0yYYf9rniGNbo43I6s1b4582lNGt8zhxTZKKZEtLuv2KtBOCJdS6xPj3V4ILCUjehT79re9ImILY9GAx1NrrU7geBLD7s-3BHNAFC6oMkwNVfKWyPSZuTVqVnf7lkYzO4NTGOG7RkXhnB9p5d6KlOcNV6_dNIBTJD7w_8I3uZta1uoSRzGZlIrhSV74CvpMpL1LMw4ePpxzfv71I9yq8gaN4vPaVdPkf6TwXi3S5SMc4blF6mKIDDUVVXvC1eK6y5DBKX1hFXuAYy5V6eade5KngYlBfjOL_AA)
 ```basic
 10 poke 53280,0:poke 53281,0:print chr$(147)
 20 poke 646,14
@@ -11,7 +11,7 @@
 60 print "####      ####"
 70 print "####"
 80 print "####      "chr$(28)"####"chr$(31)
-90 print " ####     "chr$(28)"#####"chr$(31)
+90 print " ####     "chr$(28)"######"chr$(31)
 100 print "  ####    "chr$(28)"#######"chr$(31)
 101 print "   #######" 
 102 print "    ######"
