@@ -51,3 +51,58 @@
 3040 return
 3050 data 173,25,212,141,8,192,96
 ```
+# [fastfetch](https://stigc.dk/c64/basic/?s=2hZXftqIgFMbveQoXq4somwP4J2UWs-ZVTCk9pXhEm-rpZytZ2mnWeCHi_vyx-dggpYlk_lbspB9zSkU6tJHIpAc9BT0WcETZvn8KfXGRXgiBqwypaGVbfFxFLouqXbYfF4IoP0iPiU_JAk8c4c7ECe6RqCSPhJZsKxrJIkS9L8lFOXy4bDf56kI-rkQYS-r7m3J1BZ7fsYVsikPeLpaY4rVpm8UyJ-4XEZ0MRA3wGNGg499V5aA6gyIUSQLTQTTs6oUE4hoLvIZv-lbcbpJxgGyHYL1Yv4JMD0I0OhcLiavWpFiY_tEUmRMGEcOIxnvdFJK2OhSNSrKbqPVR7daFexOVurSIUXM1O1Hsa6WOy5T8ytpcVQOwTk4YMfYOoCYADgA1AvYEpAB4pBEFEQWKt9sv5JBzsjPLfaOWlBAysAKPR9SliPljj7lU1A0Ynub9B2RoDgQ7joN_IhYMMeitVs5w4UHwSfChSKpTlya9KnwSjgT_fmhSXZY6040Kfchr-1TZAVarOfVIgBXZETdvLmDEL4zVK-MEDE4tQ5uRi4XzyMWB14izOchS-vsEwy0m16Z9C-pnxb1XkONYtyYg34KOqqlgnZ-oXb_KO30BTDDD3Oe0mk_L2oy7ui1KNcHAmwXi23eEb9bc7TW5Os0ySUyROmcOmcRvOVZbwQtYcI-OZTGScVaY-pRcp1mBzrqMPU4vcKxg8d2rXsXntMqO-kCnddervFmRCafUBjYeo85vhzllfsPI898t6gTaY-4V_VxofC4ypV8St1bD1hT_Krhetf1mg9FdlU1ZsDmRF_2v8vul8azxuFSlbiZGYtjO2NldW2WcPYzq381vlHo19FF6oGJjbpPsTjpNTpPK6XWj-araqOpHreBkK4o7GGPkW9tNnS61PRwa23RksmDA8ede1M_weXgEyaTGk-QZPxA89cEPHyTxHHvzNY4Oikmp324jPYLD8w_8xeJWsyCYOPPHKuwR6sfzJLBQVYYCmiVtwraeyyIXfnwu85nLQpfF3I1DFLAxzAOXMz6Eo3v0Lw) by Gianluca Cherubini
+```basic
+00a=147:b=49200:c=49208:d=300:e=49152
+01f=49164:x=3600:y=60:t=ti/y:h=int(t/x)
+02g=31:j=153:k=151:l=158:n=28:o=17:r=18
+03q=2:m=int((t-h*x)/y):s=int(t-h*x-m*y)
+04u1$=right$("0"+str$(h),q):u=5:p=159
+05u2$=right$("0"+str$(m),q):v=156:aa=30
+06up$=u1$+":"+u2$+":":zz=129
+07up$=up$+right$("0"+str$(s),q)
+08vi$="ntsc":si$="sid 6581"
+09fori=0to6:readz:pokeb+i,z:next
+10sysb:ifpeek(c)>dthenvi$="pal"
+11fori=0to6:readz:pokee+i,z:next
+12syse:ifpeek(f)=0thensi$="sid 8580"
+13bf$=str$(abs(fre(0))):poke53280,0
+14poke53281,0:printchr$(a)chr$(g)"   ";
+15print"  **      "chr$(j)"gianluca";
+16printchr$(k)"@"chr$(j)"commodore64"
+17printchr$(g)"   ****      "chr$(k);
+18print"--------------------"
+19printchr$(g)"  *****      "chr$(l);
+20print"os"chr$(k)": commodore os"
+21printchr$(g)" ***   *** "chr$(l);
+22print"host"chr$(k)": commodore 64"
+23printchr$(g)" **    **  "chr$(l);
+24print"kernal"chr$(k)": breadbox"
+25printchr$(g)"**     *   "chr$(l);
+26print"uptime"chr$(k)": "up$
+27printchr$(g)"**           "chr$(l);
+28print"shell"chr$(k)": basic v2"
+29printchr$(g)"**      "chr$(n)"*";
+30print"  "chr$(l)"display"chr$(k)": ";
+31print"320x200":printchr$(g)" **  ";
+32print"  "chr$(n)"**  "chr$(l)"cpu";
+33printchr$(k)": mos 6510 @ 1 mhz"
+34printchr$(g)" ***   "chr$(n)"**";
+35print"* "chr$(l)"video"chr$(k)": ";
+36printvi$:printchr$(g)"  *****    ";
+37print"  "chr$(l)"sound"chr$(k)": "si$
+38printchr$(g)"   ****      "chr$(l);
+39print"memory"chr$(k)":"bf$" bytes f";
+40print"ree":printchr$(g)"     **  ";
+41print"    "chr$(l)"locale"chr$(k)":";
+42print" en-en.petscii":print""
+43printspc(o)chr$(r)chr$(u)"  "chr$(n);
+44print"  "chr$(p)"  "chr$(v)"  ";
+45printchr$(aa)"  "chr$(g)"  "chr$(l);
+46print"  ":printspc(o-q)chr$(r);
+47printchr$(zz)"  ";
+48forw=149to155:printchr$(w)"  ";:next
+49printchr$(aa)"":end
+50data173,18,208,141,16,192,96
+51data173,25,212,141,8,192,96
+```
