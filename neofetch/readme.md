@@ -74,21 +74,21 @@
 18print"--------------------"
 19printchr$(g)"  *****      "chr$(l);
 20print"os"chr$(k)": commodore os"
-21printchr$(g)" ***   *** "chr$(l);
+21printchr$(g)" ***   ***   "chr$(l);
 22print"host"chr$(k)": commodore 64"
-23printchr$(g)" **    **  "chr$(l);
+23printchr$(g)" **    **    "chr$(l);
 24print"kernal"chr$(k)": breadbox"
-25printchr$(g)"**     *   "chr$(l);
+25printchr$(g)"**     *     "chr$(l);
 26print"uptime"chr$(k)": "up$
 27printchr$(g)"**           "chr$(l);
 28print"shell"chr$(k)": basic v2"
-29printchr$(g)"**      "chr$(n)"*";
-30print"  "chr$(l)"display"chr$(k)": ";
+29printchr$(g)"**     "chr$(n)"*";
+30print"     "chr$(l)"display"chr$(k)": ";
 31print"320x200":printchr$(g)" **  ";
-32print"  "chr$(n)"**  "chr$(l)"cpu";
+32print"  "chr$(n)"**    "chr$(l)"cpu";
 33printchr$(k)": mos 6510 @ 1 mhz"
 34printchr$(g)" ***   "chr$(n)"**";
-35print"* "chr$(l)"video"chr$(k)": ";
+35print"*   "chr$(l)"video"chr$(k)": ";
 36printvi$:printchr$(g)"  *****    ";
 37print"  "chr$(l)"sound"chr$(k)": "si$
 38printchr$(g)"   ****      "chr$(l);
