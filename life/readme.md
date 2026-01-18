@@ -70,3 +70,35 @@
 260 for x=0 to 38:a(x)=b(x):next
 270 goto 120
 ```
+# life (fast copy)
+```basic
+10 rem fast 1d cellular automaton
+20 poke 53280,0:poke 53281,0:poke 646,1:print chr$(147)
+30 print "1d cellular automaton"
+40 input "rule (0-255)";r
+50 input "random start (0/1)";rs
+60 dim a(41),b(41),p(7):rem padding arrays to avoid 'if' checks
+70 for i=0 to 7:p(i)=2^i:next:rem pre-calculate powers of 2
+80 if rs=0 then a(20)=1:goto 110
+90 for i=1 to 39:a(i)=abs(rnd(1)>.5):next
+
+100 rem main loop
+110 for x=1 to 39
+120 rem if a(x) then print chr$(5)chr$(205);:goto 140
+125 if a(x) then print chr$(18)" ";:goto 140
+130 print chr$(146)" ";
+140 next x:print
+
+150 rem ghostly boundaries for wrap-around logic
+160 a(0)=a(39):a(39)=a(1)
+
+170 rem compute next row
+180 for x=1 to 39
+190 n=a(x-1)*4+a(x)*2+a(x+1)
+200 b(x)=abs((r and p(n))>0)
+210 next x
+
+220 rem fast copy
+230 for x=1 to 39:a(x)=b(x):next
+240 goto 100
+```
