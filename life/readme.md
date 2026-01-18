@@ -1,4 +1,35 @@
-# life (1d cellular automata)
+# [life (1d cellular automaton - fast copy)](https://stigc.dk/c64/basic/?s=2XVLRkuIgEHznK6ZSPsCqd0ASdfHip1wVJuSkTCBFYq3-_Q0kune-hDBMd0_PjOAw-KuBMpcHvuHqdRHPy67YbYQagnUT1JewoqLYMyIRl0KZaKA2XXfrdAB9m3yvJ--yGUDyV1q4dQYo38qyZMsrZBTf64v2k603sOMwWhMG68ar3Xb2ajJScLBuuEUZganefelHemLZMSjbQvjFwQcIJ-SF6WIc_PGTh4KTkkMYKz5LqYUlaNf4HsZJhwno46eLPOMqMY2rKntkMwkiBSkF_Adutasfsd6g68mE8UnQ1itSShjEqpobdGDrDNCkfAaKXYqQMgdUwvxvpReqZOt0Sl6yf6Df4R0j6PF9ENi1xvagaSHY5py-A90z1WJXbMUBm7FXA7Wskr-tcuY-kT2H5De-xhI0krNKqNQ5wTk5cJjhIsLzT6UjXp9HGlxDBTv9wBITFcF0CKaHXlsHnfcDiYOK6PsTTYRMgpre2eI5eUDnx0UTxyVeq4LejwRDEBWWPcJ9m3Vq3-MsTHqD4L-IRDlNsX5N80-m0hf_BVMx_exvrtEhTs3UVyLle20SZR3m37eCfRTrWOOHjMcaGc54S7YprrZrYKCOsRPH7V-qI7jgc12tHnEqfniQ_N2_iqRV5Jp7lmMRr1YT8hc)
+```basic
+10 poke 53280,0:poke 53281,0:poke 646,1:print chr$(147)
+20 print "1d cellular automaton":print
+30 print "rule (0-255)":print "(30 chaotic, 60 sierpinski-like"
+40 input "110 conway-like)";r:if r<0 or r>255 then goto 40
+50 rs=0:print:input "random start (y/n)";rs$:if rs$="y" then rs=1
+51 print:input "fancy characters (y/n)";fc$
+52 p1$=chr$(18)+" ":p2$=chr$(146)+" "
+53 if fc$="y" then p1$=chr$(5)+chr$(205):p2$=chr$(15)+chr$(206)
+55 print chr$(147)
+60 dim a(41),b(41),p(7):for i=0 to 7:p(i)=2^i:next
+70 if rs=0 then a(20)=1:goto 100
+80 for i=1 to 39:a(i)=abs(rnd(1)>.5):next
+
+100 rem main loop
+110 for x=1 to 39
+120 if a(x) then print p1$;:goto 140
+130 print p2$;
+140 next:print
+
+200 rem compute next row
+210 a(0)=a(39):a(39)=a(1):rem boundary check
+220 for x=1 to 39
+230 n=a(x-1)*4+a(x)*2+a(x+1):b(x)=abs((r and p(n))>0)
+240 next
+
+300 rem fast copy
+310 for x=1 to 39:a(x)=b(x):next
+320 goto 100
+```
+# life (single page)
 ```basic
 10 rem 1d cellular automaton
 20 poke 53280,0:poke 53281,0:poke 646,1:print chr$(147)
@@ -69,36 +100,6 @@
 250 rem copy next state to current state
 260 for x=0 to 38:a(x)=b(x):next
 270 goto 120
-```
-# life (fast copy)
-```basic
-10 poke 53280,0:poke 53281,0:poke 646,1:print chr$(147)
-20 print "1d cellular automaton":print
-30 print "rule (0-255)":print "(30 chaotic, 60 sierpinski-like"
-40 input "110 conway-like)";r:if r>255 goto 40
-50 rs=0:print:input "random start (y/n)";rs$:if rs$="y" then rs=1
-51 print:input "fancy characters (y/n)";fc$
-52 p1$=chr$(18)+" ":p2$=chr$(146)+" "
-53 if fc$="y" then p1$=chr$(5)+chr$(205):p2$=chr$(15)+chr$(206)
-60 dim a(41),b(41),p(7):for i=0 to 7:p(i)=2^i:next
-70 if rs=0 then a(20)=1:goto 100
-80 for i=1 to 39:a(i)=abs(rnd(1)>.5):next
-
-100 rem main loop
-110 for x=1 to 39
-120 if a(x) then print p1$;:goto 140
-130 print p2$;
-140 next:print
-
-200 rem compute next row
-210 a(0)=a(39):a(39)=a(1):rem boundary check
-220 for x=1 to 39
-230 n=a(x-1)*4+a(x)*2+a(x+1):b(x)=abs((r and p(n))>0)
-240 next
-
-300 rem fast copy
-310 for x=1 to 39:a(x)=b(x):next
-320 goto 100
 ```
 # life (array swap using peeks and pokes to casette buffer)
 ```basic
