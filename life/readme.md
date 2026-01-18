@@ -5,9 +5,9 @@
 30 print "rule (0-255)":print "(30 chaotic, 60 sierpinski-like"
 40 input "110 conway-like)";r:if r<0 or r>255 then goto 40
 50 rs=0:print:input "random start (y/n)";rs$:if rs$="y" then rs=1
-51 print:input "fancy characters (y/n)";fc$
-52 p1$=chr$(18)+" ":p2$=chr$(146)+" "
-53 if fc$="y" then p1$=chr$(5)+chr$(205):p2$=chr$(15)+chr$(206)
+51 print:print "fancy characters (y/n)":input "y = 10 print, n = blocks";fc$
+53 p1$=chr$(18)+" ":p2$=chr$(146)+" "
+54 if fc$="y" then p1$=chr$(5)+chr$(205):p2$=chr$(15)+chr$(206)
 55 print chr$(147)
 60 dim a(41),b(41),p(7):for i=0 to 7:p(i)=2^i:next
 70 if rs=0 then a(20)=1:goto 100
