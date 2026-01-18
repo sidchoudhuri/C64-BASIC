@@ -102,3 +102,35 @@
 230 for x=1 to 39:a(x)=b(x):next
 240 goto 100
 ```
+# life (array swap using peeks and pokes to casette buffer)
+```basic
+10 rem ultra-fast double-buffered automaton
+20 poke 53280,0:poke 53281,0:poke 646,1:print chr$(147)
+30 print "1d cellular automaton"
+40 input "rule (0-255)";r
+50 input "random start (0/1)";rs
+60 ca=828:cb=870:rem two memory buffers
+70 for i=0 to 80:poke 828+i,0:next
+80 for i=0 to 7:poke 950+i,2^i:next
+90 if rs=0 then poke ca+20,1:goto 120
+100 for i=0 to 39:poke ca+i,abs(rnd(1)>.5):next
+
+110 rem main loop
+120 for x=0 to 38:rem 38 to prevent double-line spacing
+130 if peek(ca+x) then print chr$(18)" "chr$(146);:goto 150
+140 print " ";
+150 next x:print
+
+160 rem compute next row
+170 for x=0 to 38
+180 l=x-1:if l<0 then l=38
+190 rr=x+1:if rr>38 then rr=0
+200 n=peek(ca+l)*4+peek(ca+x)*2+peek(ca+rr)
+210 v=0:if (r and peek(950+n))>0 then v=1
+220 poke cb+x,v
+230 next x
+
+240 rem the "magic" swap
+250 t=ca:ca=cb:cb=t
+260 goto 120
+```
