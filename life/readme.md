@@ -116,22 +116,22 @@
 
 200 rem main loop
 210 for x=1 to 39
-120 if a(x) then print p1$;:goto 140
-130 print p2$;
-140 next:print
+220 if a(x) then print p1$;:goto 140
+230 print p2$;
+240 next:print
 
-150 rem ghostly boundaries for wrap-around logic
-160 a(0)=a(39):a(39)=a(1)
+310 a(0)=a(39):a(39)=a(1)
 
-170 rem compute next row
-180 for x=1 to 39
-190 n=a(x-1)*4+a(x)*2+a(x+1)
-200 b(x)=abs((r and p(n))>0)
-210 next x
+300 rem compute next row
+310 a(0)=a(39):a(39)=a(1)
+320 for x=1 to 39
+330 n=a(x-1)*4+a(x)*2+a(x+1)
+340 b(x)=abs((r and p(n))>0)
+350 next
 
-220 rem fast copy
-230 for x=1 to 39:a(x)=b(x):next
-240 goto 100
+400 rem fast copy
+410 for x=1 to 39:a(x)=b(x):next
+420 goto 200
 ```
 # life (array swap using peeks and pokes to casette buffer)
 ```basic
