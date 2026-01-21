@@ -21,7 +21,8 @@
 200 poke 1024+x+y*40,c
 210 next x
 220 next y
-230 goto 230:rem end loop
+230 get a$:if a$="" then goto 230
+240 end
 ```
 ```basic
 10 print chr$(147):rem clear screen
