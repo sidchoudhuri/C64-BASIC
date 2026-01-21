@@ -107,4 +107,18 @@
 240 next x,y
 260 goto 260
 ```
-
+# 10 print color mandelbrot 
+```basic
+10 m=15:fory=0to24:ci=(y-12)/10:for x=0 to 39:cr=(x-25)/13:zr=0:zi=0
+20 fori=1tom:r2=zr*zr:i2=zi*zi:if r2+i2>4 then goto 200
+30 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nexti
+200 rem select character and color
+210 cl=14:rem default lt blue
+220 if i>2 then cl=4:rem purple
+230 if i>5 then cl=3:rem cyan
+240 if i>10 then cl=2:rem red
+250 if i>=m then cl=0:rem black solid block
+260 ad=1024+x+y*40:poke ad+54272,cl:poke ad,(77.5+rnd(1))
+270 nextx:nexty
+280 geta$:ifa$=""thengoto280
+```
