@@ -1,6 +1,6 @@
 ```basic
-10 input "how many interations? (min 15)",m:if m<15 then goto 10
-20 print chr$(147)
+10 print chr$(147)
+20 m=15:rem interations
 30 for y=0 to 24
 40 ci=(y-12)/10
 50 for x=0 to 39
