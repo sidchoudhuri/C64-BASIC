@@ -11,3 +11,4 @@
 - [plasma](/plasma/readme.md)
 - [neofetch](/neofetch/readme.md)
 - [life](/life/readme.md) (1d cellular automata)
+- [petscii mandelbrot](/petscii%20mandelbrot/readme.md)
