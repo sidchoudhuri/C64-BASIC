@@ -27,7 +27,7 @@
 ```
 # petscii mandelbrot with color
 ```basic
-10 print chr$(147):rem clear screen
+10 print chr$(147)
 20 m=15:rem max iterations
 30 for y=0 to 24
 40 ci=(y-12)/10
@@ -42,14 +42,12 @@
 130 zi=ni
 140 next i
 150 rem select character and color
-160 cl=0:ch=64:rem default black/small dot
-170 if i>2 then cl=4:ch=102:rem purple
-180 if i>5 then cl=6:ch=119:rem blue
-190 if i>10 then cl=2:ch=126:rem red
-200 if i>=m then cl=1:ch=160:rem white/solid block
-210 ad=1024+x+y*40:rem screen memory address
-220 poke ad,ch
-230 poke ad+54272,cl:rem color ram (55296-1024=54272)
-240 next x
-250 next y
-260 goto 260```
+160 cl=14:ch=64:rem default lt blue small dot
+170 if i>2 then cl=4:ch=102:rem purple checked
+180 if i>5 then cl=6:ch=119:rem blue solid block
+190 if i>10 then cl=2:ch=126:rem red square
+200 if i>=m then cl=0:ch=160:rem black solid block
+210 ad=1024+x+y*40:poke ad+54272,cl:poke ad,ch
+240 next x:next y
+260 goto 260
+```
