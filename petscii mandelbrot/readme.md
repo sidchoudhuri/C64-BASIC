@@ -1,6 +1,6 @@
 ```basic
-10 print chr$(147):rem clear screen
-20 m=15:rem max iterations
+10 input "how many interations? (min 15)",m:if m<15 then goto 10
+20 print chr$(147)
 30 for y=0 to 24
 40 ci=(y-12)/10
 50 for x=0 to 39
@@ -13,7 +13,7 @@
 120 zr=r2-i2+cr
 130 zi=ni
 140 next i
-150 rem select petscii character based on iterations
+150 rem petscii based on iteration
 160 c=64:if i>2 then c=102
 170 if i>5 then c=119
 180 if i>10 then c=126
