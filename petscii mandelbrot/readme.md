@@ -1,13 +1,12 @@
 # 16 color mandelbrot
 ```basic
-5 dim c(17):for z=1to17:readc(z):nextz
-10 print chr$(147)
-15 m=16:f=4:s=1024:co=54272
+5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
+10 print chr$(147):m=16:f=4:s=1024:co=54272
 20 for y=0 to 24:v=y*40:ci=(y-12)/10
 30 for x=0 to 39:cr=(x-25)/13:zr=0:zi=0
 40 for i=1 to m:r2=zr*zr:i2=zi*zi:if r2+i2>f then goto 60
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
-60 rem map color from array
+60 rem map colors from array
 70 cl=c(i):ch=160:if i<m then ch=102
 80 ad=s+x+v:poke ad+co,cl:poke ad,ch
 90 next x,y
