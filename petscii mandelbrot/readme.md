@@ -1,4 +1,4 @@
-# 16 color mandelbrot
+# [16 color petscii mandelbrot](https://stigc.dk/c64/basic/?s=2TVLNktsgDL7zFDr04MRkCthONkzpu1BMEs3a4AFn1_HTV9jpTG8Iffp-EB30OIKr5OWgbzHBauQc5UUnb3tXrQcd_DKvVI7w54lDDy4OBLMp2ReTAqaEYQb3SD8q2RLHaORZ30yrs5FCtdpF07XqopgSUPhfRsAcgTpf5nVshXZoqtdJqsNPKTaZ0U4ZUvwuMBfHafALTIMNnjU7xbJTNFftkqmWk-pottFrMkKvaP5jIa_PMRQwxRnALphZ00Hpu4d3n5nC59kG5-GWIl36MHsKF3qwOeM95HdcvMEYk4f5YQMo1u5G0MjCPeqkzJqOa9JIBzyuqGkgqRrV7xvN-AD3SMCzYO1b3Q7uOdjZZwj-G3C0dww2vTbpzetk05y38jn1G3BTJHt2xhhYJyCgUceii7XDEj-pE6rapfIKAbfNAbKzgPeD7GHynnXf4EWAG4yr8KDdg1YninP8Ne6uy5VQ7EOA7U2ul_pLT_HTU1W7yN3wr-Luwa5kqAguvPwLsSemA5P0SyiBBcHP_Mql5C2XLe94w2XDL1xyKbhU_IMrLjsu_gI)
 ```basic
 5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
 10 print chr$(147):m=16:f=4:s=1024:co=54272
