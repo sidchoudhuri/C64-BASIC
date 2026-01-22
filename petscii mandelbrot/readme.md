@@ -32,8 +32,8 @@
 100 goto 100
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 ```
+# WIP 16 color petscii mandelbrot with machine language color cycling
 ```basic
-
 5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
 9 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0:rem colors
 10 print chr$(147):m=16:f=4:s=1024:co=54272
@@ -54,8 +54,7 @@
 530 data 162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
 540 data 157,0,217, 189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
 550 data 41,15,157,0,219,232,208,209,96
-
-
+```
 # petscii mandelbrot
 ```basic
 10 print chr$(147)
