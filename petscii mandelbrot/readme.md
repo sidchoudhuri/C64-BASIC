@@ -26,7 +26,7 @@
 45 rem calculates new imaginary and real parts and updates for iteration
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
 60 rem map colors from array
-70 cl=c(i):ch=160:if i<m then ch=102
+70 cl=c(i):ch=(77.5+rnd(1))rem ch=160:if i<m then ch=102
 80 ad=s+x+v:poke ad+co,cl:poke ad,ch
 90 next x,y
 100 goto 100
