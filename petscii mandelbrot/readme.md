@@ -50,7 +50,7 @@
 130 data 157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
 140 data 41,15,157,0,219,232,208,209,96
 ```
-# ml color cycler (49 bytes)
+## ml color cycler (49 bytes)
 ```assembly
 49152  A2 00           LDX #$00          ; 162,0     - Load X with 0 (loop counter, 0-255)
 49154  BD 00 D8        LDA $D800,X       ; 189,0,216 - Load color from $D800+X
@@ -76,6 +76,37 @@
 49198  E8              INX               ; 232       - Increment X
 49199  D0 D1           BNE $D154         ; 208,209   - Loop back if X != 0
 49201  96              BRK               ; 96        - End/crash
+```
+## ml color cycler (skips black)
+```assembly
+$C000  49152  A2 00           LDX #$00          ; 162,0     - Load X with 0 (loop counter, 0-255)
+$C002  49154  BD 00 D8        LDA $D800,X       ; 189,0,216 - Load color from $D800+X
+$C005  49157  F0 08           BEQ $C00F         ; 240,8     - If color is 0 (black), skip ahead 8 bytes
+$C007  49159  18              CLC               ; 24        - Clear carry
+$C008  49160  69 01           ADC #$01          ; 105,1     - Add 1 to color
+$C00A  49162  29 0F           AND #$0F          ; 41,15     - Mask to 0-15 (wraps around)
+$C00C  49164  9D 00 D8        STA $D800,X       ; 157,0,216 - Store back to $D800+X
+$C00F  49167  BD 00 D9        LDA $D900,X       ; 189,0,217 - Load color from $D900+X
+$C012  49170  F0 08           BEQ $C01C         ; 240,8     - If color is 0 (black), skip ahead 8 bytes
+$C014  49172  18              CLC               ; 24        - Clear carry
+$C015  49173  69 01           ADC #$01          ; 105,1     - Add 1 to color
+$C017  49175  29 0F           AND #$0F          ; 41,15     - Mask to 0-15
+$C019  49177  9D 00 D9        STA $D900,X       ; 157,0,217 - Store back to $D900+X
+$C01C  49180  BD 00 DA        LDA $DA00,X       ; 189,0,218 - Load color from $DA00+X
+$C01F  49183  F0 08           BEQ $C029         ; 240,8     - If color is 0 (black), skip ahead 8 bytes
+$C021  49185  18              CLC               ; 24        - Clear carry
+$C022  49186  69 01           ADC #$01          ; 105,1     - Add 1 to color
+$C024  49188  29 0F           AND #$0F          ; 41,15     - Mask to 0-15
+$C026  49190  9D 00 DA        STA $DA00,X       ; 157,0,218 - Store back to $DA00+X
+$C029  49193  BD 00 DB        LDA $DB00,X       ; 189,0,219 - Load color from $DB00+X
+$C02C  49196  F0 08           BEQ $C036         ; 240,8     - If color is 0 (black), skip ahead 8 bytes
+$C02E  49198  18              CLC               ; 24        - Clear carry
+$C02F  49199  69 01           ADC #$01          ; 105,1     - Add 1 to color
+$C031  49201  29 0F           AND #$0F          ; 41,15     - Mask to 0-15
+$C033  49203  9D 00 DB        STA $DB00,X       ; 157,0,219 - Store back to $DB00+X
+$C036  49206  E8              INX               ; 232       - Increment X
+$C037  49207  D0 B9           BNE $C000         ; 208,185   - Loop back if X != 0
+$C039  49209  96              BRK               ; 96        - End/crash
 ```
 # petscii mandelbrot
 ```basic
