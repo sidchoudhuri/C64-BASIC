@@ -15,6 +15,23 @@
 100 goto 100
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 ```
+# [10 print 16 color mandelbrot](https://stigc.dk/c64/basic/?s=2TVLNktsgDL7zFDr04MRkCthONkzpu1BMEs3a4AFn1_HTV9jpTG8Iffp-EB30OIKr5OWgbzHBauQc5UUnb3tXrQcd_DKvVI7w54lDDy4OBLMp2ReTAqaEYQb3SD8q2RLHaORZ30yrs5FCtdpF07XqopgSUPhfRsAcgTpf5nVshXZoqtdJqsNPKTaZ0U4ZUvwuMBfHafALTIMNnjU7xbJTNFftkqmWk-pottFrMkKvaP5jIa_PMRQwxRnALphZ00Hpu4d3n5nC59kG5-GWIl36MHsKF3qwOeM95HdcvMEYk4f5YQMo1u5G0MjCPeqkzJqOa9JIBzyuqGkgqRrV7xvN-AD3SMCzYO1b3Q7uOdjZZwj-G3C0dww2vTbpzetk05y38jn1G3BTJHt2xhhYJyCgUceii7XDEj-pE6rapfIKAbfNAbKzgPeD7GHynnXf4EWAG4yr8KDdg1YninP8Ne6uy5VQ7EOA7U2ul_pLT_HTU1W7yN3wr-Luwa5kqAguvPwLsSemA5P0SyiBBcHP_Mql5C2XLe94w2XDL1xyKbhU_IMrLjsu_gI)
+```basic
+5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
+10 print chr$(147):m=16:f=4:s=1024:co=54272
+20 for y=0 to 24:v=y*40:ci=(y-12)/10:rem maps row to complex plane
+30 for x=0 to 39:cr=(x-25)/13:zr=0:zi=0:rem maps column to real axis
+35 rem checks distance from center and assigns color if more than 2
+40 for i=1 to m:r2=zr*zr:i2=zi*zi:if r2+i2>f then goto 60
+45 rem calculates new imaginary and real parts and updates for iteration
+50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
+60 rem map colors from array
+70 cl=c(i):ch=160:if i<m then ch=102
+80 ad=s+x+v:poke ad+co,cl:poke ad,ch
+90 next x,y
+100 goto 100
+110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
+```
 # petscii mandelbrot
 ```basic
 10 print chr$(147)
