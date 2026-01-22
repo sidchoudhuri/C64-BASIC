@@ -34,26 +34,21 @@
 ```
 # WIP 16 color petscii mandelbrot with machine language color cycling
 ```basic
-5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
-9 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0:rem colors
-10 print chr$(147):m=16:f=4:s=1024:co=54272
-20 for y=0 to 24:v=y*40:ci=(y-12)/10:rem maps row to complex plane
-30 for x=0 to 39:cr=(x-25)/13:zr=0:zi=0:rem maps column to real axis
-35 rem checks distance from center and assigns color if more than 2
+5 dim c(17):for z=1to17:readc(z):nextz:rem mandelbrot color map
+9 cs=0:for z=49152 to 49201:read d:poke z,d:cs=cs+d:next z
+10 poke 53280,0:poke 53281,0:print chr$(147):m=16:f=4:s=1024:co=54272
+20 for y=0 to 24:v=y*40:ci=(y-12)/10
+30 for x=0 to 39:cr=(x-25)/13:zr=0:zi=0
 40 for i=1 to m:r2=zr*zr:i2=zi*zi:if r2+i2>f then goto 60
-45 rem calculates new imaginary and real parts and updates for iteration
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
-60 rem map colors from array
-70 cl=c(i):ch=(77.5+rnd(1))
+60 cl=c(i):ch=102:if i>=m then ch=160
 80 ad=s+x+v:poke ad+co,cl:poke ad,ch
 90 next x,y
-499 rem color cycling
-500 for i=49152 to 49201:read d:poke i,d
-510 sys 49152:goto 200
-520 rem color cycling ml
-530 data 162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
-540 data 157,0,217, 189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
-550 data 41,15,157,0,219,232,208,209,96
+100 sys 49152:for t=1 to 10:next t:goto 100
+110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
+120 data 162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
+130 data 157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
+140 data 41,15,157,0,219,232,208,209,96
 ```
 # petscii mandelbrot
 ```basic
