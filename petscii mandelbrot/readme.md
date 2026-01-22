@@ -50,6 +50,32 @@
 130 data 157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
 140 data 41,15,157,0,219,232,208,209,96
 ```
+```asm
+49152  A2 00           LDX #$00          ; X = 0 (loop counter, 0-255)
+49154  BD 00 D8        LDA $D800,X       ; Load color from $D800+X
+49157  18              CLC               ; Clear carry
+49158  69 01           ADC #$01          ; Add 1 to color
+49160  29 0F           AND #$0F          ; Mask to 0-15 (wraps around)
+49162  9D 00 D8        STA $D800,X       ; Store back to $D800+X
+49165  BD 00 D9        LDA $D900,X       ; Load color from $D900+X
+49168  18              CLC
+49169  69 01           ADC #$01
+49171  29 0F           AND #$0F
+49173  9D 00 D9        STA $D900,X       ; Store back to $D900+X
+49176  BD 00 DA        LDA $DA00,X       ; Load color from $DA00+X
+49179  18              CLC
+49180  69 01           ADC #$01
+49182  29 0F           AND #$0F
+49184  9D 00 DA        STA $DA00,X       ; Store back to $DA00+X
+49187  BD 00 DB        LDA $DB00,X       ; Load color from $DB00+X
+49190  18              CLC
+49191  69 01           ADC #$01
+49193  29 0F           AND #$0F
+49195  9D 00 DB        STA $DB00,X       ; Store back to $DB00+X
+49198  E8              INX               ; X++
+49199  D0 D1           BNE $D154         ; Loop back if X != 0 (when X overflows to 0, exit)
+49201  96              BRK               ; End/crash
+```
 # petscii mandelbrot
 ```basic
 10 print chr$(147)
