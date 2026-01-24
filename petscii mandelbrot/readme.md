@@ -50,7 +50,7 @@
 10 dimc(17):forz=1to17:readc(z):next:data.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.
 20 printchr$(147):m=16:f=4:s=1024:co=54272
 30 fory=.to24:v=y*40:ci=(y-12)/10:forx=.to39:cr=(x-25)/13:zr=.:zi=.
-40 fori=1tom:r2=zr*zr:i2=zi*zi:if r2+i2>fthengoto60
+40 fori=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>fthengoto60
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
 60 cl=c(i):ch=(77.5+rnd(1)):ad=s+x+v:pokead+co,cl:pokead,ch:next x,y:goto30
 ```
