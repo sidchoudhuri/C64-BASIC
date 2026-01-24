@@ -1,7 +1,9 @@
 # C64-BASIC
 #### Learning C64 BASIC
 - [useful pokes](useful_pokes.md)
-- [PETSCII codes](https://www.c64-wiki.com/wiki/PETSCII_Codes_in_Listings)
+- PETSCII codes
+  - [@ c64 wiki](https://www.c64-wiki.com/wiki/PETSCII_Codes_in_Listings)
+  - [@ pagetable](https://www.pagetable.com/c64ref/charset/)
 #### My Code
 - [glitch](/glitch/readme.md)
 - [horse](/horse/readme.md)
