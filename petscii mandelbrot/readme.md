@@ -82,16 +82,16 @@
 ```
 # 16 color petscii mandelbrot with machine language color cycling (10 liner)
 ```basic
-5 dimc(17):forz=1to17:readc(z):next:data.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.
-9 forz=49152to49201:readd:pokez,d:next:dA162,0,189,0,216,24,105,1,41,15,157,0
-10 m=16:f=4:s=1024:co=54272:poke53280,0:poke53281,0:printchr$(147)
-20 fory=0to24:v=y*40:ci=(y-12)/10:forx=0to39:cr=(x-25)/13:zr=0:zi=0
-40 fori=1tom:r2=zr*zr:i2=zi*zi:if r2+i2>fthengoto 60
-50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nexti
-60 ifi<mthencl=c(i):ch=102:ad=s+x+v:pokead+co,cl:pokead,ch
-90 nEx,y:dA216,189,0,217,24,105,1,41,15,217,189,0,218,24,105,1,41,15,157,0,218
-95 dA189,0,219,24,105,1,41,15,157,0,219,232,208,209,96
-100 sys49152:fort=1to100:nextt:goto100
+10 dIc(17):fOz=1to17:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.:?chr$(147)
+20 fOz=49152to49201:rEd:pOz,d:nE:m=16:f=4:s=1024:co=54272:pO53280,.:pO53281,.
+30 fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
+40 fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftHcl=c(i):ad=s+x+v:pOad+co,cl:pOad,102:gO60
+50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nEi
+60 nEx,y
+70 sys49152:fOt=1to100:nE:goto100
+80 dA162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
+90 dA157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
+100 dA41,15,157,0,219,232,208,209,96
 ```
 ## ml color cycler (49 bytes)
 ```assembly
