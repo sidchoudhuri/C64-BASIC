@@ -39,6 +39,14 @@
 100 goto 20
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 ```
+# [10 print looping 16 color mandelbrot (4 liner) optimized](https://stigc.dk/c64/basic/?s=2LY7BboMwDIbvPElC3AybUFZLnrRDpe2UZ6iCaH0onVJUQZ5-MO32yf7_z27ugkceJfDwnQz2lsdYBOfHnfM5mWJ5OvPw6eEIJ0CEABiggxawhR4QsAEkeAcC7MBXOMZV_PygwC9Z69BwUjHrAcm-YbO5l33bnjhlMcuBum3ccsniuaj4isao_9dJSq5LZt1A66KsYyan9DHOX9cYqnZSoXrPqEu6OzIdlFzKu2rS7XGtwlO6QD1xuonpe9-5PA0GreXLINhQcIt78U-8DO4Jyaj9Y0i3rb3AyteIvw)
+```basic
+0m=16:f=4:dIc(17):fOz=1tom:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.
+1fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
+2fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftHgO4
+3ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nEi
+4s=54272:ch=(77.5+rnd(1)):ad=1024+x+v:pOad+s,c(i):pOad,ch:nEx,y:gO1
+```
 # 10 print looping 16 color mandelbrot (10 liner)
 ```basic
 10 dimc(17):forz=1to17:readc(z):next
