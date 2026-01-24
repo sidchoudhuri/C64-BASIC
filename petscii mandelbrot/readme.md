@@ -22,6 +22,13 @@
 2fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>4tH:ad=1024+x+v:pOad+s,c(i):pOad,a:nEx,y
 3ify<25tHni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nE:nEx,y
 ```
+# [16 color petscii mandelbrot w/ black center (4 liner)]()
+```basic
+0m=16:dIc(m):fOz=1tom:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
+1s=54272:fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
+2fOi=1tom:r2=zr*zr:i2=zi*zi:ad=1024+x+v:ifr2+i2>4tH:pOad+s,c(i):pOad,102:nEx,y
+3ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nE:ify<25tHpOad+s,0:pOad,160:nEx,y
+```
 # [10 print looping 16 color mandelbrot (commented)](https://stigc.dk/c64/basic/?s=2TVLNkpwgEL7zFH3IQUcmAdRxhyryLgSZsWsVLGB21acP6qQqNxq-_n7obqHHCUzBu1I-fIBN8eR5J4PVvSm2Ujq7pC2XE_x54diD8WOG6RD0SjiDOaBLYIbwo-BN5pgUv8mHamRUnIlGGq_aRnSCCAY7_6oYJA_55Uutl4ZJg6pYr1yUvzg7ZCY9Rwj-e4cZP82jXWAetbOkPimWk6K-SxNUsVxFm3truQXF5IbqP5bs9TW5HZzjjKAXjKRuYX83gzWfMYePSTtj4RF8vrQu2RzO9aBjxKeL77j4gMkHC2nQDgRpTiOo-M49ySDUFi5bkJgPeNlQ5oYgKhS_H7nHOnj6DLwx0rzV9Wheo042grPfgJN-otNhPaQPr7MOKR7la-4P4KGY7emE3pGWgUMlLrsuVgb3-EFcUVQm7L_g8JgcILkxeH_IGSaeWc8JdgzMqEyBpTSDKrruZ1sF1xe8LMkHA92rWC3Vl5z9p81VZTw147-KmoHcs49dZ6H7OrAzqGCE593IvjUweqN3yjltKG9oS2vKa9pRTjmjXNAPKihvKfsL)
 ```basic
 5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
