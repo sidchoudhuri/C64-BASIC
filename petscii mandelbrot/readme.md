@@ -5,11 +5,11 @@
 20 for y=0 to 24:v=y*40:ci=(y-12)/10:rem maps row to complex plane
 30 for x=0 to 39:cr=(x-25)/13:zr=0:zi=0:rem maps column to real axis
 35 rem checks distance from center and assigns color if more than 2
-40 for i=1 to m:r2=zr*zr:i2=zi*zi:if r2+i2>f then goto 60
+40 for i=1 to m:r2=zr*zr:i2=zi*zi:if r2+i2>f then goto 70
 45 rem calculates new imaginary and real parts and updates for iteration
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
 60 rem map colors from array
-70 cl=c(i):ch=160:if i<m then ch=102
+70 cl=c(i):ch=160:if i<=m then goto 90
 80 ad=s+x+v:poke ad+co,cl:poke ad,ch
 90 next x,y
 100 goto 100
@@ -41,10 +41,10 @@
 30 for x=0 to 39:cr=(x-25)/13:zr=0:zi=0
 40 for i=1 to m:r2=zr*zr:i2=zi*zi:if r2+i2>f then goto 60
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
-60 cl=c(i):ch=102:if i>=m then ch=160
+60 cl=c(i):ch=102:if i>=m then goto 90
 80 ad=s+x+v:poke ad+co,cl:poke ad,ch
 90 next x,y
-100 sys 49152:for t=1 to 10:next t:goto 100
+100 sys 49152:for t=1 to 100:next t:goto 100
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 120 data 162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
 130 data 157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
