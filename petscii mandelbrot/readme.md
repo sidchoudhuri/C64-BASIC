@@ -82,11 +82,11 @@
 ```
 # 16 color petscii mandelbrot with machine language color cycling (10 liner)
 ```basic
-10 dIc(17):fOz=1to17:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.:?chr$(147)
-20 fOz=49152to49201:rEd:pOz,d:nE:m=16:f=4:s=1024:co=54272:pO53280,.:pO53281,.
-30 fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
-40 fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftHcl=c(i):ad=s+x+v:pOad+co,cl:pOad,102:gO60
-50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nEi
+10 dIc(17):fOz=1to17:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.:sY58692
+20 fOz=49152to49201:rEd:pOz,d:nE:m=16:f=4:s=1024:co=54272:pO53280,0:pO53281,0
+30 q=102:fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
+40 fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftHcl=c(i):ad=s+x+v:pOad+co,cl:pOad,q:gO60
+50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nE
 60 nEx,y
 70 sys49152:fOt=1to100:nE:goto100
 80 dA162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
