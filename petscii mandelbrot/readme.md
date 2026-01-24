@@ -54,6 +54,14 @@
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:next i
 60 cl=c(i):ch=(77.5+rnd(1)):ad=s+x+v:pokead+co,cl:pokead,ch:next x,y:goto30
 ```
+# 10 print looping 16 color mandelbrot (4 liner)
+```basic
+10 dIc(17):fOz=1to16:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15:m=16:f=4
+30 fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
+40 fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftHgO60
+50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nEi
+60 s=1024:co=54272:cl=c(i):ch=(77.5+rnd(1)):ad=1024+x+v:pOad+co,cl:pOad,ch:nEx,y:gO30
+```
 # WIP 16 color petscii mandelbrot with machine language color cycling
 ```basic
 5 dim c(17):for z=1to17:readc(z):nextz:rem mandelbrot color map
