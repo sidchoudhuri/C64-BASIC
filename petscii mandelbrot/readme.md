@@ -62,7 +62,7 @@
 50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nEi
 60 s=1024:co=54272:cl=c(i):ch=(77.5+rnd(1)):ad=1024+x+v:pOad+co,cl:pOad,ch:nEx,y:gO30
 ```
-# WIP 16 color petscii mandelbrot with machine language color cycling
+# 16 color petscii mandelbrot with machine language color cycling
 ```basic
 5 dim c(17):for z=1to17:readc(z):nextz:rem mandelbrot color map
 9 cs=0:for z=49152 to 49201:read d:poke z,d:cs=cs+d:next z
@@ -79,6 +79,19 @@
 120 data 162,0,189,0,216,24,105,1,41,15,157,0,216,189,0,217,24,105,1,41,15
 130 data 157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
 140 data 41,15,157,0,219,232,208,209,96
+```
+# 16 color petscii mandelbrot with machine language color cycling (10 liner)
+```basic
+5 dimc(17):forz=1to17:readc(z):next:data.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.
+9 forz=49152to49201:readd:pokez,d:next:dA162,0,189,0,216,24,105,1,41,15,157,0
+10 m=16:f=4:s=1024:co=54272:poke53280,0:poke53281,0:printchr$(147)
+20 fory=0to24:v=y*40:ci=(y-12)/10:forx=0to39:cr=(x-25)/13:zr=0:zi=0
+40 fori=1tom:r2=zr*zr:i2=zi*zi:if r2+i2>fthengoto 60
+50 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nexti
+60 ifi<mthencl=c(i):ch=102:ad=s+x+v:pokead+co,cl:pokead,ch
+90 nEx,y:dA216,189,0,217,24,105,1,41,15,217,189,0,218,24,105,1,41,15,157,0,218
+95 dA189,0,219,24,105,1,41,15,157,0,219,232,208,209,96
+100 sys49152:fort=1to100:nextt:goto100
 ```
 ## ml color cycler (49 bytes)
 ```assembly
