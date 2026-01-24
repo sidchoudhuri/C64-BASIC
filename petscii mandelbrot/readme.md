@@ -15,12 +15,16 @@
 100 goto 100
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 ```
-# [16 color petscii mandelbrot (4 liner)]
+```
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+```
+# [16 color petscii mandelbrot (4 liner)](https://stigc.dk/c64/basic/?s=2LY_BjoMwDETvfAkQw2IT6NZar7SHSt0T34CCIvlQWqWoIvn6JdXeRh553kx3ExzZi-Xl15U4VuynJLjdbxwurkwVrxdefloY4QyIYAEtDNAD9nACBOwACT6BAIcCZ8GO-CmDpRMdSVHa7U6WXxJr27FTKWODVH1gd7h7dvszuyDl3tBwnHtOQVpOKm1BftL_JiQp1CmwHkLrpKw-kFH69tuV5yVTrdnNix_TvJgnuFKrt4b56L9DLHr18YuG7bqqUJ3T1DjNtECNknEhQ1fNc98ffw)
 ```basic
-10 dIc(17):fOz=1to16:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15:m=16:f=4:co=54272
-20 fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
-30 fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftH:cl=c(i):ad=1024+x+v:pOad+co,cl:pOad,102:nEx,y
-40 ni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nEi:nEx,y
+0m=16:f=4:dIc(16):fOz=1tom:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15
+1a=102:s=54272:fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
+2fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>ftH:ad=1024+x+v:pOad+s,c(i):pOad,a:nEx,y
+3ify<25tHni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nE:nEx,y
+```
 ```
 # [10 print looping 16 color mandelbrot (commented)](https://stigc.dk/c64/basic/?s=2TVLNkpwgEL7zFH3IQUcmAdRxhyryLgSZsWsVLGB21acP6qQqNxq-_n7obqHHCUzBu1I-fIBN8eR5J4PVvSm2Ujq7pC2XE_x54diD8WOG6RD0SjiDOaBLYIbwo-BN5pgUv8mHamRUnIlGGq_aRnSCCAY7_6oYJA_55Uutl4ZJg6pYr1yUvzg7ZCY9Rwj-e4cZP82jXWAetbOkPimWk6K-SxNUsVxFm3truQXF5IbqP5bs9TW5HZzjjKAXjKRuYX83gzWfMYePSTtj4RF8vrQu2RzO9aBjxKeL77j4gMkHC2nQDgRpTiOo-M49ySDUFi5bkJgPeNlQ5oYgKhS_H7nHOnj6DLwx0rzV9Wheo042grPfgJN-otNhPaQPr7MOKR7la-4P4KGY7emE3pGWgUMlLrsuVgb3-EFcUVQm7L_g8JgcILkxeH_IGSaeWc8JdgzMqEyBpTSDKrruZ1sF1xe8LMkHA92rWC3Vl5z9p81VZTw147-KmoHcs49dZ6H7OrAzqGCE593IvjUweqN3yjltKG9oS2vKa9pRTjmjXNAPKihvKfsL)
 ```basic
