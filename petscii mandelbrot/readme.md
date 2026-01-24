@@ -64,7 +64,7 @@
 ```
 # 16 color petscii mandelbrot with machine language color cycling
 ```basic
-5 dim c(17):for z=1to17:readc(z):nextz:rem mandelbrot color map
+5 dim c(17):for z=1to17:readc(z):nextz
 9 cs=0:for z=49152 to 49201:read d:poke z,d:cs=cs+d:next z
 10 poke 53280,0:poke 53281,0:print chr$(147):m=16:f=4:s=1024:co=54272
 20 for y=0 to 24:v=y*40:ci=(y-12)/10
@@ -80,7 +80,7 @@
 130 data 157,0,217,189,0,218,24,105,1,41,15,157,0,218,189,0,219,24,105,1
 140 data 41,15,157,0,219,232,208,209,96
 ```
-# 16 color petscii mandelbrot with machine language color cycling (10 liner)
+# [16 color petscii mandelbrot with machine language color cycling (10 liner)](https://stigc.dk/c64/basic/?s=2dZFBa-MwEIXv-hU-OvHEnRlLtiVQoYdAe8p5j0UmRdDGrWxK7F_fkUkDu7AXMeh9PL15IiyGl1BSt3Pn0-ppHqlz6RjKdecuRzc81dCCBSLQQBoMNEANdEBACMTQAwMZqN30x_StZcVYZCNtyfA8astI4je4z9MKQ7b88NS6s9du8oSsXRi90dyxEKbhHgFvEwGqBouvjEm4xdfzKPy3X_YaXYi-XA7EuwdCUa9ZbawLyZfXAxu5btyafO3W6Gulc6qY1_twif2a9mtyUYa4X6OL58RV5Mfz_BzefSjjzr0Ofqqu1bdkeR2qMEJ430b4cm-nFpXB4hI977NTrELMbyU-RK5Cyk9eouyqWqGOV1hUh8W0TFspEnbeekbMdbyN26h6-Ygnahmk1t7KydQCS-lopGxNuWUy3U34Rbp_EGU3mxvX3bn-f1b9HbF3REkecfkbFLlhYBQntGDbHw)
 ```basic
 10 dIc(17):fOz=1to17:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,.:sY58692
 20 fOz=49152to49201:rEd:pOz,d:nE:m=16:f=4:s=1024:co=54272:pO53280,0:pO53281,0
