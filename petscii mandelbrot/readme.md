@@ -15,7 +15,7 @@
 100 goto 100
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 ```
-# [10 print 16 color mandelbrot](https://stigc.dk/c64/basic/?s=2TVLNkqMgEL7zFH3Yg0YyC6hxQi3zLiyS2DUKFpgZ49MPaLZqbzR8_f1000KPE5iCd6W8-QCb4ovnnQxW96bYSunsumypnODvA8cejB8TTIegn4QzmAO6BcwQfhW8SRyT4hd5U42MijPRSONV24hOEMEg8z8Vg8VDevlSz1PDpEFVPM9clL8522UmPUcI_jvDjJ_m0a4wj9pZUh8U60FRX6UJqljPok29tdyCYnJD9R9L8vqYXAanOCPoFSOpW8jvZrDmM6bwcdHOWLgFny6tW2wK53rQMeLdxVdcvMHkg4Vl0A4EaQ4jqHjmnmQQagunLUhMBzxtKFNDEBWKj1vqsQ7uPgEvjDQvdT2ax6gXG8HZb8BJ39Hp8Nyld6-zDkvcy8fc78BdMdnTC3pHWgYOlThlXawM5vhBnFFUJuQpONw3B0guDF4DOcLEI-uxwY6BGZUpsJRmUEXXvbVVcH3By1IeY0r7ZDkO_pmOKPmKCfLOQPcqVmv1JWf_aVNVGU_N-K-iZiDX5DK7WGn-LOwYQzoQnr5OiqWB0Qu9Us5pQ3lDW1pTXtOOcsoZ5YK-U0F5S9kP)
+# [10 print looping 16 color mandelbrot](https://stigc.dk/c64/basic/?s=2TVLNkpwgEL7zFH3IQUcmAdRxhyryLgSZsWsVLGB21acP6qQqNxq-_n7obqHHCUzBu1I-fIBN8eR5J4PVvSm2Ujq7pC2XE_x54diD8WOG6RD0SjiDOaBLYIbwo-BN5pgUv8mHamRUnIlGGq_aRnSCCAY7_6oYJA_55Uutl4ZJg6pYr1yUvzg7ZCY9Rwj-e4cZP82jXWAetbOkPimWk6K-SxNUsVxFm3truQXF5IbqP5bs9TW5HZzjjKAXjKRuYX83gzWfMYePSTtj4RF8vrQu2RzO9aBjxKeL77j4gMkHC2nQDgRpTiOo-M49ySDUFi5bkJgPeNlQ5oYgKhS_H7nHOnj6DLwx0rzV9Wheo042grPfgJN-otNhPaQPr7MOKR7la-4P4KGY7emE3pGWgUMlLrsuVgb3-EFcUVQm7L_g8JgcILkxeH_IGSaeWc8JdgzMqEyBpTSDKrruZ1sF1xe8LMkHA92rWC3Vl5z9p81VZTw147-KmoHcs49dZ6H7OrAzqGCE593IvjUweqN3yjltKG9oS2vKa9pRTjmjXNAPKihvKfsL)
 ```basic
 5 dim c(17):for z=1to17:readc(z):nextz:rem build color array
 10 print chr$(147):m=16:f=4:s=1024:co=54272
@@ -29,7 +29,7 @@
 70 cl=c(i):ch=(77.5+rnd(1))
 80 ad=s+x+v:poke ad+co,cl:poke ad,ch
 90 next x,y
-100 goto 100
+100 goto 20
 110 data 0,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 ```
 # WIP 16 color petscii mandelbrot with machine language color cycling
