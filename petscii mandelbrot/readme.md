@@ -22,7 +22,7 @@
 2fOi=1tom:r2=zr*zr:i2=zi*zi:ifr2+i2>4tH:ad=1024+x+v:pOad+s,c(i):pOad,a:nEx,y
 3ify<25tHni=2*zr*zi+ci:zr=r2-i2+cr:zi=ni:nE:nEx,y
 ```
-# [16 color petscii mandelbrot w/ black center (4 liner)]()
+# [16 color petscii mandelbrot w/ black center (4 liner)](https://stigc.dk/c64/basic/?s=2LY9BboNADEX3nAQYQ8dmII1VR-oiUrriDNEgJC8g1QRFMKfP0LL78pfef7aTYMfDj8-ngsc-Ci6PicPV57Hg-crDdw0dnAERHKCDFhrABk6AgBaQ4BMIsAWb4VNaRydKlE3q5UGOX7KVzrJXybcKqfhAm9p1b5sz-yD5WlGbzg3HIDVHlTqjsdfDgiSGMgbWFLSMyvdB0JIzq3mxjoGM0sUtN_7t74N5gs-1-MvJjZL9ClvWzCpU7hw1XvedQJWS8WGfm3V_Usfti9rldmDswejsP-MN)
 ```basic
 0m=16:dIc(m):fOz=1tom:rEc(z):nE:dA.,6,9,11,4,14,5,3,13,7,1,10,12,8,2,15,0
 1s=54272:fOy=.to24:v=y*40:ci=(y-12)/10:fOx=.to39:cr=(x-25)/13:zr=.:zi=.
