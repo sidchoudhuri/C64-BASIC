@@ -20,6 +20,13 @@ Visitors: click links to run code in online emulator
 240 poke 55296+i,c:poke 1024+i,h
 250 next:goto 210
 ```
+# [plasma 10 print (4 liner)](https://stigc.dk/c64/basic/?s=2TU9LDoMgEN17ilkOYsxAGT8kHMYU2xBTaKoLvH1R06S7eS_vN4rAh9eKmlnYR_oER1sqwK4YhAtxw0H29Roihppa0oaFsHHOW6UJih52R7Al0OZwQ77QbbR3hytirgcBU_Rw5MtC7P_EdSmubgSTd6rEy702JLN9p2WefIN937L8RI-q9F6kZKN73dzPGbnZK3MtCY5Zj93Rz50e-ZRDaPA9z0v5Rqpf3-m0z1SUhr4)
+```basic
+10 dims(255):fori=0to255:s(i)=int(8+7*sin(i*0.0245)):next
+20 for y=0 to 24:for x=0 to 39:c=(s((x*8) and 255)+s((y*8) and 255)) and 15
+30 ad=1024+y*40+x:pokead,(77.5+rnd(1)):pokead+54272,c:nextx,y
+40 for i=55296 to 56295:poke i,(peek(i)+1) and 15:next:goto 40
+```
 # [plasma with color cycling - no color codes](https://stigc.dk/c64/basic/?s=2ZZHdbqNADIXv_RRWtNJCIO14hiFAy0rJZJqMSiACIiWXVdu7qJG6f-rb1wS6pdobND62jz8bErir7i1qJRMRiqwLujcN7ziKQ8o-SuYylBzVrmzRbOpvHkVzH6TA2m5xuXfFChtXWmwXy8KCYu9L6eSScuV6lJ3cQCRw5bbYeFJrH7TAu6pGlwtsK2QJYsE55-ds4SXBfMrNnpvGVzJRlFxLHfv-wDK5Yru5wNIe2v_wgMQYcFcsmu0CiPp5x2FelHXRoY9UCsRbmbzxvMM08XFRrjokP2DhOBaAeEtTFbnWMo2D4zQSwSFrTJ2TkNEQA_Gq66rZL1EJAaSHo3NfaPrjckeYUHbhPL-c3vDp9eEvnv88nIDiYbHuA3ztfhtzNIX92EbSl-ulaQpSjsHcJ5PLTL6z9t7jrB8QSDWGk9EXuG7SP8ANzmb4dH75_gsf3x5Pz8h4v59_gtQD4brqTsku_O97Sm6ztmSzlW1AMaW7Q_ODNLabTs7NjGJQstdvOX_RN3mUBAaUGurzz4SZpaCizrzd1-U7)
 ```basic
 10 POKE 53280,0:POKE53281,0:POKE646,1:POKE 53272,21:PRINT CHR$(147)
