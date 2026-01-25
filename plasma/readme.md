@@ -20,7 +20,7 @@ Visitors: click links to run code in online emulator
 240 poke 55296+i,c:poke 1024+i,h
 250 next:goto 210
 ```
-# [plasma 10 print (4 liner)](https://stigc.dk/c64/basic/?s=2TU9LDoMgEN17ilkOYsxAGT8kHMYU2xBTaKoLvH1R06S7eS_vN4rAh9eKmlnYR_oER1sqwK4YhAtxw0H29Roihppa0oaFsHHOW6UJih52R7Al0OZwQ77QbbR3hytirgcBU_Rw5MtC7P_EdSmubgSTd6rEy702JLN9p2WefIN937L8RI-q9F6kZKN73dzPGbnZK3MtCY5Zj93Rz50e-ZRDaPA9z0v5Rqpf3-m0z1SUhr4)
+# [plasma 10 print w/ color cycling (4 liner)](https://stigc.dk/c64/basic/?s=2TU9LDoMgEN17ilkOYsxAGT8kHMYU2xBTaKoLvH1R06S7eS_vN4rAh9eKmlnYR_oER1sqwK4YhAtxw0H29Roihppa0oaFsHHOW6UJih52R7Al0OZwQ77QbbR3hytirgcBU_Rw5MtC7P_EdSmubgSTd6rEy702JLN9p2WefIN937L8RI-q9F6kZKN73dzPGbnZK3MtCY5Zj93Rz50e-ZRDaPA9z0v5Rqpf3-m0z1SUhr4)
 ```basic
 10 dims(255):fori=0to255:s(i)=int(8+7*sin(i*0.0245)):next
 20 for y=0 to 24:for x=0 to 39:c=(s((x*8) and 255)+s((y*8) and 255)) and 15
