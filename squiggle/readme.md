@@ -36,18 +36,16 @@
 ```
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```basic
-10 gosub100:m=55296:n=1024:poke53272,23
-20 ifpeek(214)*peek(211)=998thenpoken+998,223:poken+999,222:?chr$(19);
-30 p=p-rnd(.)+40.5+sin(p)and1023
-40 ?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);
-50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
-51 pokem+p,0:poke1024+p,252
-60 u=t:t=s:s=r:r=q:q=p:goto20
+10 gosub100:m=55296:n=1024:x=peek(211):y=peek(214):rem poke53272,23
+20 p=p-rnd(.)+40.5+sin(p)and1023
+40 pokem+p,0:poke1024+p,252
+50 u=t:t=s:s=r:r=q:q=p:goto20
+
 100 a$=chr$(145)+"list"+chr$(13):gosub200
 105 a$="10 m=55296:n=1024:poke53272,23:printchr$(147);"+chr$(13)
 110 a$=a$+"20 ifpeek(214)*peek(211)=990thenpoken+998,223:poken+999,222:?chr$(19);"
 120 a$=a$+chr$(13)+"30 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
-130 a$=a$+"40 ?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);"+chr$(13)
+130 a$=a$+"40 printchr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);"+chr$(13)
 131 gosub200
 140 a$="50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:
 150 a$=a$+"pokem+q,11"+chr$(13)+"51 pokem+p,0:poke1024+p,252"+chr$(13)
@@ -55,5 +53,6 @@
 161 gosub200
 170 a$="run"+chr$(13):gosub200
 180 return
+
 200 forx=1tolen(a$):?mid$(a$,x,1);:forw=1to10:next:next:return
 ```
