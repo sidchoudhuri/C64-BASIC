@@ -36,6 +36,26 @@
 ```
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```basic
+10 gosub100:m=55296:n=1024
+20 p=p-rnd(.)+40.5+sin(p)and1023
+30 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
+40 pokem+p,0:poke1024+p,252
+50 u=t:t=s:s=r:r=q:q=p:goto20
+
+100 a$=chr$(145)+"list"+chr$(13):gosub200
+105 a$="10 m=55296:n=1024"+chr$(13)
+110 a$=a$+"20 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
+111 gosub200
+120 a$="30 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:"
+150 a$=a$+"pokem+q,11"+chr$(13)+"40 pokem+p,0:poke1024+p,252"+chr$(13)
+160 a$=a$+"50 u=t:t=s:s=r:r=q:q=p:goto20"+chr$(13)
+161 gosub200
+170 a$="run"+chr$(13):gosub200
+180 return
+
+200 forx=1tolen(a$):printmid$(a$,x,1);:forw=1to10:next:next:return
+```
+```basic
 10 gosub100:m=55296:n=1024:x=peek(211):y=peek(214):rem poke53272,23
 20 p=p-rnd(.)+40.5+sin(p)and1023
 40 pokem+p,0:poke1024+p,252
