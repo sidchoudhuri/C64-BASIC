@@ -98,7 +98,7 @@
 150 a$=a$+"pokem+q,11"+chr$(13)+"40 pokem+p,0:poke1024+p,252"+chr$(13)
 160 a$=a$+"50 u=t:t=s:s=r:r=q:q=p:goto20"+chr$(13)
 161 gosub300:gosub500
-170 a$="run"+chr$(13):d=20:gosub500
+170 a$="run"+chr$(13):d=300:gosub500
 180 return
 
 200 a$="break in"+str$(int(rnd(1)*5)*10+10)+chr$(13)
@@ -109,7 +109,7 @@
 
 240 ifint(rnd(.)*1)=0 then a$="new"+chr$(13)+chr$(13):gosub300:gosub500
 
-250 a$="load"+chr$(34)+"worm!"+chr$(34)+",8"+chr$(13)+chr$(13):d=20:gosub500
+250 a$="load"+chr$(34)+"worm!"+chr$(34)+",8"+chr$(13)+chr$(13):d=300:gosub500
 260 a$="searching for worm!"+chr$(13)+"loading"+chr$(13)
 270 gosub300:gosub500:gosub100
 
