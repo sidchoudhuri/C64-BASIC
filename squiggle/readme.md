@@ -8,7 +8,6 @@
 ```basic
 0p=p-rnd(.)+40.5+sin(p)and1023:poke1024+p,81:q=p:goto
 ```
-```
 # 10 PRINT Random Fill
 ```basic
 0p=p-rnd(.)*40and1023:poke1024+p,77.5+rnd(1):goto
@@ -16,4 +15,11 @@
 # Simple Diagonal 10 PRINT
 ```basic
 0p=p-rnd(.)+40and1023:poke1024+p,77.5+rnd(1):goto
+```
+# WORM
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+```basic
+0m=55296:p=p-rnd(.)+40.5+sin(p)and1023
+1pokem+u,6:pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11:pokem+p,0:poke1024+p,81
+22u=t:t=s:s=r:r=q:q=p:goto
 ```
