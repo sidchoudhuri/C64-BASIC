@@ -84,7 +84,7 @@
 10 gosub100:m=55296:n=1024
 11 fori=1toint(rnd(1)*500)
 20 p=p-rnd(.)+40.5+sin(p)and1023
-30 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
+30 pokem+u,6:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
 40 pokem+p,0:poke1024+p,(48.5+rnd(1))
 50 u=t:t=s:s=r:r=q:q=p:nexti
 60 gosub200:goto11
@@ -111,11 +111,14 @@
 
 250 a$="load"+chr$(34)+"worm!"+chr$(34)+",8"+chr$(13)+chr$(13):d=300:gosub500
 260 a$="searching for worm!"+chr$(13)+"loading"+chr$(13)
-270 gosub300:gosub500:gosub100
+270 gosub300:a$=a$+chr$(13):gosub500:gosub100
 
 280 return
 
 300 a$=a$+"ready."+chr$(13):return
+
+399 add corruption
+400 b$="":fori=1tolen(a$):b$=b$+mid$(a$,i,1):ifint(rnd(1)*3)=0thenb$=b$+"0":next:a$=b$
 
 500 forx=1tolen(a$):printmid$(a$,x,1);::fory=0tod:next:next:d=0:return
 ```
