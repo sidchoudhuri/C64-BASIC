@@ -100,8 +100,8 @@
 170 a$="run"+chr$(13):gosub500
 180 return
 
-200 a=int(rnd(1)*5)*10+10:a$="break in"+str$(a)
-201 a$=a$+chr$(13)+"ready"+chr$(13):gosub500
+200 a$="break in"+str$(int(rnd(1)*5)*10+10)
+201 a$=a$+chr$(13)+"ready."+chr$(13)+chr$(13):gosub500
 210 gosub100:return
 
 500 forx=1tolen(a$):printmid$(a$,x,1);:next:return
