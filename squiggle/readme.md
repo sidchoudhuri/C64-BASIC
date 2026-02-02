@@ -24,4 +24,5 @@
 30 p=p-rnd(.)+40.5+sin(p)and1023
 40 ?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);
 50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11:pokem+p,0:poke1024+p,252
-60 u=t:t=s:s=r:r=q:q=p:goto20```
+60 u=t:t=s:s=r:r=q:q=p:goto20
+```
