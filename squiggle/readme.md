@@ -17,7 +17,6 @@
 0p=p-rnd(.)+40and1023:poke1024+p,77.5+rnd(1):goto
 ```
 # WORM
-12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```basic
 10 m=55296:n=1024:poke53272,23:?chr$(147);
 20 ifpeek(214)*peek(211)=912thenpoken+998,223:poken+999,222:?chr$(19);
@@ -34,4 +33,25 @@
 50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
 51 pokem+p,0:poke1024+p,252
 60 u=t:t=s:s=r:r=q:q=p:goto20
+```
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+```basic
+11 a$="10 m=55296:n=1024:poke53272,23:printchr$(147);"+chr$(13)
+12 a$=a$+"20 ifpeek(214)*peek(211)=990thenpoken+998,223:poken+999,222:?chr$(19);"
+13 a$=a$+chr$(13)+"30 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
+14 a$=a$+"40 ?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);"+chr$(13)
+15 a$=a$+"50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:
+16 a$=a$+"pokem+q,11"+chr$(13)+"51 pokem+p,0:poke1024+p,252"+chr$(13)
+17 a$=a$+"60 u=t:t=s:s=r:r=q:q=p:goto20"
+16 forx=1tolen(a$):?mid$(a$,x,1);:forw=1to10:next:next
+```
+```basic
+11 a$="10 m=55296:n=1024:poke53272,23:printchr$(147);"+chr$(13)
+12 a$=a$+"20 ifpeek(214)*peek(211)=990thenpoken+998,223:poken+999,222:?chr$(19);"
+13 a$=a$+chr$(13)+"30 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
+14 a$=a$+"40 ?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);"+chr$(13)
+15 a$=a$+"50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:
+16 a$=a$+"pokem+q,11"+chr$(13)+"51 pokem+p,0:poke1024+p,252"+chr$(13)
+17 a$=a$+"60 u=t:t=s:s=r:r=q:q=p:goto20"
+20 forx=1tolen(a$):?mid$(a$,x,1);:forw=1to10:next:next
 ```
