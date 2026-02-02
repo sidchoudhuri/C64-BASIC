@@ -54,5 +54,5 @@
 170 a$="run"+chr$(13):gosub200
 180 return
 
-200 forx=1tolen(a$):?mid$(a$,x,1);:forw=1to10:next:next:return
+200 forx=1tolen(a$):printmid$(a$,x,1);:forw=1to10:next:next:return
 ```
