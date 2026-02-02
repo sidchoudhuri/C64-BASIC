@@ -2,8 +2,10 @@
 - [SID Winder .sid Compressor](https://sidwinder.netlify.app/)
 # C64-BASIC
 #### Learning C64 BASIC
+- [BASIC encoding](https://www.retrointernals.org/basic/basic.html)
 - [useful pokes](useful_pokes.md)
 - PETSCII codes
+  - [@ STA](https://sta.c64.org/cbm64pet.html)
   - [@ c64 wiki](https://www.c64-wiki.com/wiki/PETSCII_Codes_in_Listings)
   - [@ pagetable](https://www.pagetable.com/c64ref/charset/)
 #### My Code
