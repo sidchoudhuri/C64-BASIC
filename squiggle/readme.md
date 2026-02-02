@@ -81,23 +81,28 @@
 500 forx=1tolen(a$):printmid$(a$,x,1);:forw=1to10:next:next:return
 ```
 ```basic
-10 gosub100:m=55296:n=1024:x=peek(211):y=peek(214):rem poke53272,23
+10 gosub100:m=55296:n=1024
+11 fori=1toint(rnd(1)*500)
 20 p=p-rnd(.)+40.5+sin(p)and1023
-40 pokem+p,0:poke1024+p,252
-50 u=t:t=s:s=r:r=q:q=p:goto20
+30 pokem+u,6:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
+40 pokem+p,0:poke1024+p,(48.5+rnd(1))
+50 u=t:t=s:s=r:r=q:q=p:nexti
+60 gosub200:goto11
 
-100 a$=chr$(145)+"list"+chr$(13):gosub200
-105 a$="10 m=55296:n=1024:poke53272,23:printchr$(147);"+chr$(13)
-110 a$=a$+"20 ifpeek(214)*peek(211)=990thenpoken+998,223:poken+999,222:printchr$(19);"
-120 a$=a$+chr$(13)+"30 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
-130 a$=a$+"40 printchr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);"+chr$(13)
-131 gosub200
-140 a$="50 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:
-150 a$=a$+"pokem+q,11"+chr$(13)+"51 pokem+p,0:poke1024+p,252"+chr$(13)
-160 a$=a$+"60 u=t:t=s:s=r:r=q:q=p:goto20"+chr$(13)
-161 gosub200
-170 a$="run"+chr$(13):gosub200
+100 a$=chr$(145)+"list"+chr$(13)+chr$(13):gosub500
+105 a$="10 m=55296:n=1024"+chr$(13)
+110 a$=a$+"20 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
+111 gosub500
+120 a$="30 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:"
+150 a$=a$+"pokem+q,11"+chr$(13)+"40 pokem+p,0:poke1024+p,252"+chr$(13)
+160 a$=a$+"50 u=t:t=s:s=r:r=q:q=p:goto20"+chr$(13)
+161 gosub500
+170 a$="run"+chr$(13):gosub500
 180 return
 
-200 forx=1tolen(a$):printmid$(a$,x,1);:forw=1to10:next:next:return
+200 a=int(rnd(1)*5)*10+10:a$="break in"+str$(a)
+201 a$=a$+chr$(13)+"ready"+chr$(13):gosub500
+210 gosub100:return
+
+500 forx=1tolen(a$):printmid$(a$,x,1);:next:return
 ```
