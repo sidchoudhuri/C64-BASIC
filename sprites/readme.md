@@ -502,59 +502,29 @@
 ```
 ## A
 ```basic
-10 REM *** TEST I SPRITE ONLY ***
-20 POKE 53280,0 : POKE 53281,0
-30 CLR
-40 REM
-50 REM *** LOAD I SPRITE DATA ***
-60 FOR R = 0 TO 20
-70 READ A, B, C
-80 POKE 12288 + (R * 3), A
-90 POKE 12288 + (R * 3) + 1, B
-100 POKE 12288 + (R * 3) + 2, C
-110 NEXT R
-120 REM
-130 REM *** SET SPRITE POINTER ***
-140 POKE 2040, 192
-150 REM
-160 REM *** ENABLE SPRITE 0 ***
-170 POKE 53269, 1
-180 REM
-190 REM *** SET SPRITE COLOR ***
-200 POKE 53287, 3
-210 REM
-220 REM *** SET POSITION ***
-230 POKE 53248, 100
-240 POKE 53249, 100
-250 REM
-260 REM *** MAIN LOOP - SCROLL ***
-270 FOR X = 50 TO 250
-280 POKE 53248, X
-290 FOR D = 1 TO 20
-300 NEXT D
-310 NEXT X
-320 GOTO 270
-330 REM
-340 REM *** I SPRITE DATA ***
-360 data 0,0,0
-370 data 0,60,0
-380 data 0,60,0
-390 data 0,126,0
-400 data 0,126,0
-410 data 0,231,0
-420 data 0,231,0
-430 data 1,195,128
-440 data 1,195,128
-450 data 3,129,192
-460 data 3,129,192
-470 data 7,0,224
-480 data 7,0,224
-490 data 15,255,240
-500 data 15,255,240
-510 data 28,0,56
-520 data 28,0,56
-530 data 56,0,28
-540 data 56,0,28
-550 data 112,0,14
-560 data 112,0,14,3
+10 print chr$(147)
+20 print "generated with spritemate"
+30 print "1 of 1 sprites displayed."
+40 poke 53285,8: rem multicolor 1
+50 poke 53286,6: rem multicolor 2
+60 poke 53269,255 : rem set all 8 sprites visible
+70 for x=12800 to 12800+63: read y: poke x,y: next x: rem sprite generation
+80 :: rem A
+90 poke 53287,3: rem color = 3
+100 poke 2040,200: rem pointer
+105 if c>320 then c=0
+106 if c<0 then c=320
+109 lc=cand255:hc=0:if c>255 then hc=1
+110 poke 53248, lc: rem x pos
+111 poke 53248+16,hc
+120 poke 53249, 100: rem y pos
+130 poke 53276, 0: rem multicolor
+140 poke 53277, 1: rem width
+150 poke 53271, 1: rem height
+160 c=c+1:goto 100
+1000 rem sprite 1 / A / singlecolor / color: 3
+1010 data 0,0,0,0,60,0,0,60,0,0,126,0,0,126,0,0
+1020 data 255,0,0,255,0,1,255,128,1,231,128,3,231,192,3,195
+1030 data 192,7,195,224,7,195,224,15,255,240,15,255,240,31,0,248
+1040 data 31,0,248,62,0,124,62,0,124,124,0,62,124,0,62,3
 ```
