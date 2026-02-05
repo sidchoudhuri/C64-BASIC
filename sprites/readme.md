@@ -528,3 +528,26 @@
 1030 data 192,7,195,224,7,195,224,15,255,240,15,255,240,31,0,248
 1040 data 31,0,248,62,0,124,62,0,124,124,0,62,124,0,62,3
 ```
+## K
+```basic
+10 print chr$(147)
+20 print "generated with spritemate"
+30 print "1 of 1 sprites displayed."
+40 poke 53285,8: rem multicolor 1
+50 poke 53286,6: rem multicolor 2
+60 poke 53269,255 : rem set all 8 sprites visible
+70 for x=12800 to 12800+63: read y: poke x,y: next x: rem sprite generation
+80 :: rem K
+90 poke 53287,3: rem color = 3
+100 poke 2040,200: rem pointer
+110 poke 53248, 44: rem x pos
+120 poke 53249, 120: rem y pos
+130 poke 53276, 0: rem multicolor
+140 poke 53277, 0: rem width
+150 poke 53271, 0: rem height
+1000 :: rem K / singlecolor / color: 3
+1010 data 0,0,0,248,0,62,248,0,254,248,1,252,248,7,240,248
+1020 data 15,224,248,63,128,248,127,0,249,252,0,255,248,0,255,224
+1030 data 0,255,224,0,255,248,0,249,252,0,248,127,0,248,63,128
+1040 data 248,15,224,248,7,240,248,1,252,248,0,254,248,0,62,3
+```
