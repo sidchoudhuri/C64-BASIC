@@ -20,6 +20,16 @@
 ```basic
 0printchr$(147-b)"{home}sober?";:poke53270,200+(tianda):getk$:a=a+(k$<>"")*(a<7)*(a+1):b=4:goto
 ```
+# Scrolling 10 PRINT
+```basic
+0 poke53270,peek(53270)and247:?chr$(147);
+10 a$=a$+chr$(205.5+rnd(1))
+20 fori=1to(len(a$)-cos(39.5+rnd(1))*2.5):forx=7to0step-1
+30 poke53270,(peek(53270)and248)+x
+40 ?tab(0);mid$(a$,i,sin(39.5+rnd(1))*2.5);:
+50 next x,i
+70 goto10
+```
 # WORM
 ```basic
 10 m=55296:n=1024:poke53272,23:?chr$(147);
