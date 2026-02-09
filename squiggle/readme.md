@@ -30,6 +30,16 @@
 50 next x,i
 70 goto10
 ```
+# 53270
+```basic
+0 ?chr$(147);:rem poke53270,peek(53270)and247
+10 a$=a$+chr$(205.5+rnd(1))
+20 fori=1to(len(a$)-40):forx=-7to0step-1
+30 poke53270,(peek(53270)and248)+xand16
+40 print tab(0);mid$(a$,i,39);:
+50 next x,i
+60 goto10
+```
 # WORM
 ```basic
 10 m=55296:n=1024:poke53272,23:?chr$(147);
