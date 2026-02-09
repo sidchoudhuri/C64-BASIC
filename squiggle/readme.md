@@ -16,6 +16,10 @@
 ```basic
 0p=p-rnd(.)+40and1023:poke1024+p,77.5+rnd(1):goto
 ```
+# Sober? by Bobby Brightling
+```basic
+0printchr$(147-b)"{home}sober?";:poke53270,200+(tianda):getk$:a=a+(k$<>"")*(a<7)*(a+1):b=4:goto
+```
 # WORM
 ```basic
 10 m=55296:n=1024:poke53272,23:?chr$(147);
