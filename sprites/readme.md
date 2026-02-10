@@ -211,7 +211,8 @@
 ```
 # Testing
 ## MAIN
-```10 REM *** TEST I SPRITE ONLY ***
+```basic
+10 REM *** TEST I SPRITE ONLY ***
 20 POKE 53280,0 : POKE 53281,0
 30 CLR
 40 REM
