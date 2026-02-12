@@ -5,6 +5,10 @@
 2pokem+p,0:poke1024+p,81
 32q5=q4:q4=q3:q3=q2:q2=q1:q1=p:goto
 ```
+# [Squiggly! - One Liner](https://stigc.dk/c64/basic/?s=2DcjLDYAgEAXAdjSgAWRJfMm2ADVw8rr825fbZIywXDUe9lTe3JSjNe6BJCL3BrV02N7llWjJ0RFh8cTkgcEdnRsaV1QuKCz40g8)
+```basic
+0p=p-rN(1)+40.5aN1023:pO55296+w,6:pO1024+p,paN255:w=v:v=u:u=t:t=s:s=r:r=q:q=p:gO
+```
 ```basic
 0p=p-rnd(.)+40.5+sin(p)and1023:poke1024+p,81:q=p:goto
 ```
