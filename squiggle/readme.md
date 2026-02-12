@@ -34,6 +34,14 @@
 60 pokecc+y,6:pokecc+u,4:pokecc+r,14:pokecc+p,3:pokess+p,peek(ss+k)
 70 z=y:y=x:x=w:w=v:v=u:u=t:t=s:s=r:r=q:q=p:k=k-1:goto 40
 ```
+# Squiggly! Words, Reads From Screen 
+```basic
+10row=peek(211):ifrow=24thenpoke211,0
+20m=55296:p=(512+80*sin(t)+40*cos(t))and1023:t=t+0.01
+30pokem+q5,6:pokem+q4,1:pokem+q3,15:pokem+q2,12:pokem+q1,11
+40pokem+p,0:poke1024+p,peek(1024+45+a)
+50q5=q4:q4=q3:q3=q2:q2=q1:q1=p:a=a+1:goto10
+```
 # 10 PRINT Random Fill
 ```basic
 0p=p-rnd(.)*40and1023:poke1024+p,77.5+rnd(1):goto
