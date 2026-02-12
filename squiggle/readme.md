@@ -23,6 +23,17 @@
 60 pokecc+y,6:pokecc+u,4:pokecc+r,14:pokecc+p,3:pokess+p,peek(ss+k)
 70 z=y:y=x:x=w:w=v:v=u:u=t:t=s:s=r:r=q:q=p:k=k-1:goto 40
 ```
+```basic
+10 ss=1024:cc=55296:?chr$(147);
+20 input"squiggly! by m0nde";a$
+21 ifa$=""thenro=1:goto30
+25 ?chr$(147)a$:ro=1:iflen(a$)>39thenro=2
+30 p=40*ro:q=p:r=p:s=p:t=p:u=p:v=p:w=p:x=p:y=p:z=p
+40 ifk<0thenk=18
+50 p=p-rnd(.)+40.5and1023:ifp<40*rothenp=p+40*ro
+60 pokecc+y,6:pokecc+u,4:pokecc+r,14:pokecc+p,3:pokess+p,peek(ss+k)
+70 z=y:y=x:x=w:w=v:v=u:u=t:t=s:s=r:r=q:q=p:k=k-1:goto 40
+```
 # 10 PRINT Random Fill
 ```basic
 0p=p-rnd(.)*40and1023:poke1024+p,77.5+rnd(1):goto
