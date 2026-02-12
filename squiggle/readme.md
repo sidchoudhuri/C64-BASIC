@@ -12,15 +12,16 @@
 ```basic
 0p=p-rnd(.)+40.5+sin(p)and1023:poke1024+p,81:q=p:goto
 ```
-# [Squiggly! Words](https://stigc.dk/c64/basic/?s=2PdDLTsQwDAXQfb6iCxatYlCcRx9Ghm9BmcKgqI9J2pkpX0_FpOyOLPvqyqiKlBiVtuQ9O6e7mgZudUuBFb37c3wq0TbVq9CqmKfQD2A0_UEiGJOpQbtMA3gsWGiyHDTC5ABZQ5fHDWjMbAGP5Q6wE1YV35_hrVvO_bhXEW6_5vk5jqcSK2nVi_sYT3tvI-pHrvdyg5oyV7AHI-C_Z3g0Tmnn3PehHGSoRKOKH95o4zvd-UY3vtKVV1p5oYUTJY4U-UIXnve3BIn0NS2TVb8)
+# [Squiggly! Words](https://stigc.dk/c64/basic/?s=2RY9bboMwFET_vQoX8QEKiWywSePgdi0UDEFOwWBIQlbfKerj40gj-freM5xR7zVnqVBVpaVMT7my-qTeq8sURlwc4zNJGe16t8yBH5euba_rC_1Y6SfraxOcy5CkknZNGRZvQTBfTP__tQxVO8xDxkjGqNM8VaN2agIezGABN3AHD7CCp3ZE4GRjC_a9z2r-SqTEAref-jo6xDvBDrLsa2hnqmtcIbZBDOCF5Lg1WFNVuzXJ1U9cEvEbp4T_ZZdkW_Qe0RljIyQbkyOjT71C5wGtO_Ru0FygO0PbQ39CjXGrY7Xd860nFewL)
 ```basic
-10 ss=1024:cc=55296:m=828:k=0:?chr$(147);
-20 pokem,32:pokem+1,33:pokem+2,25:pokem+3,12:pokem+4,7:pokem+5,7
-30 pokem+6,9:pokem+7,21:pokem+8,17:pokem+9,19
-40 ifk>9thenk=0
-50 p=p-rnd(1)+40.5and1023
-60 pokecc+y,6:pokecc+u,4:pokecc+r,14:pokecc+p,3:pokess+p,peek(m+k)
-70 z=y:y=x:x=w:w=v:v=u:u=t:t=s:s=r:r=q:q=p:k=k+1:goto40
+10 ss=1024:cc=55296:k=9:?chr$(147);
+20 input"squiggly! by m0nde";a$
+25 ifa$<>""then?chr$(147)a$:goto30
+30 p=12:q=p:r=p:s=p:t=p:u=p:v=p:w=p:x=p:y=p:z=p
+40 ifk<0thenk=18
+55 p=p-rnd(.)+40.5and1023:ifp<40thenp=p+40
+60 pokecc+y,6:pokecc+u,4:pokecc+r,14:pokecc+p,3:pokess+p,peek(ss+k)
+70 z=y:y=x:x=w:w=v:v=u:u=t:t=s:s=r:r=q:q=p:k=k-1:goto 40
 ```
 # 10 PRINT Random Fill
 ```basic
