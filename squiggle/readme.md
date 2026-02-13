@@ -12,6 +12,13 @@
 ```basic
 0p=p-rnd(.)+40.5+sin(p)and1023:poke1024+p,81:q=p:goto
 ```
+# Squiggly! Circular Path
+```basic
+0 m=55296:x=int(20+15*sin(t)):y=int(12+10*cos(t)):p=(y*40.5+rnd(1)+x)and1023:t=t+0.1
+1 pokem+q5,6:pokem+q4,1:pokem+q3,15:pokem+q2,12:pokem+q1,11
+2 pokem+p,0:poke1024+p,81
+3 2q5=q4:q4=q3:q3=q2:q2=q1:q1=p:goto
+```
 # [Squiggly! Words](https://stigc.dk/c64/basic/?s=2RY9bboMwFET_vQoX8QEKiWywSePgdi0UDEFOwWBIQlbfKerj40gj-freM5xR7zVnqVBVpaVMT7my-qTeq8sURlwc4zNJGe16t8yBH5euba_rC_1Y6SfraxOcy5CkknZNGRZvQTBfTP__tQxVO8xDxkjGqNM8VaN2agIezGABN3AHD7CCp3ZE4GRjC_a9z2r-SqTEAref-jo6xDvBDrLsa2hnqmtcIbZBDOCF5Lg1WFNVuzXJ1U9cEvEbp4T_ZZdkW_Qe0RljIyQbkyOjT71C5wGtO_Ru0FygO0PbQ39CjXGrY7Xd860nFewL)
 ```basic
 10 ss=1024:cc=55296:k=9:?chr$(147);
