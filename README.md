@@ -4,7 +4,9 @@
 #### Learning C64 BASIC
 - [BASIC encoding](https://www.retrointernals.org/basic/basic.html)
 - [useful pokes](useful_pokes.md)
-- PETSCII codes
+- Color
+  - [@ Big Code](https://bigcode.wordpress.com/2016/10/30/commodore-64-color-codes/) 
+- PETSCII
   - [@ STA](https://sta.c64.org/cbm64pet.html)
   - [@ c64 wiki](https://www.c64-wiki.com/wiki/PETSCII_Codes_in_Listings)
   - [@ pagetable](https://www.pagetable.com/c64ref/charset/)
