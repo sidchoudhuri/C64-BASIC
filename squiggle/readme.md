@@ -19,6 +19,15 @@
 2 pokem+p,0:poke1024+p,81
 3 2q5=q4:q4=q3:q3=q2:q2=q1:q1=p:goto
 ```
+```basic
+0 m=55296
+10 forcc=-30to30:ra=5+rnd(1)+abs(cc)
+20 xx=int(20+ra*sin(i)):yy=int(12+(ra/1.5)*cos(i))
+30 p=(yy*40+xx)and1023:i=i+0.1
+40 pokem+e,6:pokem+z,1:pokem+v,15:pokem+s,12:pokem+q,11
+50 pokem+p,0:poke1024+p,81:rem pand255or128
+60 e=d:d=c:c=b:b=a:a=z:z=y:y=x:x=w:w=v:v=u:u=t:t=s:s=r:r=q:q=p:next:goto 10
+```
 # [Squiggly! Words](https://stigc.dk/c64/basic/?s=2RY9bboMwFET_vQoX8QEKiWywSePgdi0UDEFOwWBIQlbfKerj40gj-freM5xR7zVnqVBVpaVMT7my-qTeq8sURlwc4zNJGe16t8yBH5euba_rC_1Y6SfraxOcy5CkknZNGRZvQTBfTP__tQxVO8xDxkjGqNM8VaN2agIezGABN3AHD7CCp3ZE4GRjC_a9z2r-SqTEAref-jo6xDvBDrLsa2hnqmtcIbZBDOCF5Lg1WFNVuzXJ1U9cEvEbp4T_ZZdkW_Qe0RljIyQbkyOjT71C5wGtO_Ru0FygO0PbQ39CjXGrY7Xd860nFewL)
 ```basic
 10 ss=1024:cc=55296:k=9:?chr$(147);
