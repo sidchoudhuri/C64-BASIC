@@ -2,6 +2,7 @@
 - [SID Winder .sid Compressor](https://sidwinder.netlify.app/)
 # C64-BASIC
 #### Learning C64 BASIC
+- [One Liners](/oneliners/readme.md)
 - [BASIC encoding](https://www.retrointernals.org/basic/basic.html)
 - [useful pokes](useful_pokes.md)
 - Color
