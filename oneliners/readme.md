@@ -4,7 +4,7 @@ use 1 and 9 to move your ship left and right
 ```basic
 1?tArN(0)*39)"*":gEk:p=p+(k=1)-(k=9):pO1284+p,22:onp<420aN(pE(1324+p)=42)+2gO,1
 ```
-# Drip
+# [Drip](https://stigc.dk/c64/basic/?s=2M0jLL6qwNSjJN7UqsS3WqkjMSzE0MDK2KsjPTjU1NbI00y7RMTQBc4HiJkBeQWpqtgaErZlfZGhkYZWXWlFiVWxbrG1olZ5fkg8A)
 ```basic
 0forx=0to7:t=s*xand1023:poke55296+t,14:poke1024+t,peek(1024+t)or128:next:s=s+1:goto
 ```
