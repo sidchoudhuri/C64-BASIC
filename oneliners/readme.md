@@ -6,7 +6,7 @@ use 1 and 9 to move your ship left and right
 ```
 # Drip
 ```basic
-0q=p+40:c=32or128:poke55296+q,qand15:forx=0to5:r=q*xand1023:poke55296+r,rand15:poke1024+r,c:next:p=p+1and1023:goto
+0forx=0to7:t=s*xand1023:poke55296+t,14:poke1024+t,peek(1024+t)or128:next:s=s+1:goto
 ```
 ```basic
 0FOR I=0 TO 4:READ A:poke55296+995+i,6:POKE1024+995+I,A:NEXT:DATA 13,48,14,4,5
