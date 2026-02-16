@@ -8,3 +8,6 @@ use 1 and 9 to move your ship left and right
 ```basic
 0q=p+40:c=32or128:poke55296+q,qand15:forx=0to5:r=q*xand1023:poke55296+r,rand15:poke1024+r,c:next:p=p+1and1023:goto
 ```
+```basic
+0FOR I=0 TO 4:READ A:poke55296+995+i,6:POKE1024+995+I,A:NEXT:DATA 13,48,14,4,5
+1forx=0to5.5+rnd(1):r=q*xand1023:poke55296+r,14:poke1024+r,peek(1024+r)or128:next:q=q+1:goto1```
