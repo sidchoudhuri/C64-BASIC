@@ -8,6 +8,78 @@ use 1 and 9 to move your ship left and right
 ```basic
 0forx=0to5:r=s*xand1023:poke55296+r,14:poke1024+r,peek(1024+r)or128:next:s=s+1:goto
 ```
+
+### Drip in 6502 machine language
+
+This is a direct machine-language version of the Drip loop (using `x=0..7` as in your variant):
+
+```asm
+; C64 6502
+; Build to $C000 and run with: SYS 49152
+
+* = $C000
+
+S       = $C080
+TLO     = $C081
+THI     = $C082
+SCRLO   = $FB
+SCRHI   = $FC
+COLLO   = $FD
+COLHI   = $FE
+
+START:
+        LDA #$00
+        STA TLO
+        STA THI
+        LDX #$08                ; FOR X=0 TO 7
+
+LOOP:
+        ; SCRPTR = $0400 + T
+        CLC
+        LDA TLO
+        ADC #<$0400
+        STA SCRLO
+        LDA THI
+        ADC #>$0400
+        STA SCRHI
+
+        ; COLPTR = $D800 + T
+        CLC
+        LDA TLO
+        ADC #<$D800
+        STA COLLO
+        LDA THI
+        ADC #>$D800
+        STA COLHI
+
+        LDY #$00
+        LDA #$0E                ; color 14
+        STA (COLLO),Y
+
+        LDA (SCRLO),Y
+        ORA #$80                ; PEEK(...) OR 128
+        STA (SCRLO),Y
+
+        ; T = (T + S) AND 1023
+        CLC
+        LDA TLO
+        ADC S
+        STA TLO
+        LDA THI
+        ADC #$00
+        AND #$03
+        STA THI
+
+        DEX
+        BNE LOOP
+
+        INC S                   ; S=S+1
+        JMP START               ; GOTO
+
+        ; state byte (defaults to 0)
+        * = S
+        .BYTE $00,$00,$00
+```
 # [Face & Dripping Paint Effect Demo](https://stigc.dk/c64/basic/?s=2nVfLbuMwDLz3K3xMNj6IpJ4B8jEBmu4GxTatkUM_v6Qkv91ENlChdiCSo9FwJIOqXq__z7sQwv74dmuuJ3W_8cuxuZxfz7vr_vh5e7-AQn241vH94_J9f0FV8eRvmWyOzenrz_f545Vn0Qup6vr2ebm872JQsz8R3v9dPiSNMRjsoal3Dc-m_QH0i1ZVV6Cph3G3BtCnakZVX6evAxz_3u63ChWXZ9jn-7kirB_-8UyYzARFNYDlATXKs1XdQA2184_zYVnleSAtBoLyNRrdQUGy_KzHsNDVwXMKnVJ4wz_RquJmFWrH9VHoEKptCkVNDI4imJ431wEURMPncX23lTX_O2vClBkztTA4R0g54g-BV8f0GeAVUgEAUKuQo4zEDsfCoHDBaKlDM0KwVXFAM-nrpLXMGu_tc_ZAzxfBXcBA-VnBUxClypuBccTRdh2D3fCsDW07EFvlB1P5uVZvWIqFk4QFBrXJ_-0zDFiqQGgZdKYvjrCBQeDu0mKTrgOxVYQ4FaGsfOq7_Z4zvYG3DnmASm0aVzERoYiFvYGXXIShSIPiKSk3JDAqtjOHPxJh8PM2BqpdEJsZQNiqQBwpMDZdxwGNjFgOL7EfCDquAeWAM5QaCbMGGRdqHhA4BmqvIo1PMFCRAv0QGvQKpAUF9g6EXb92fZV7jLdt2MO0VYHUKxCQO1hYE41nv4UFKXo3kaWkWfBBkGQ02urfQDyRYDzQZEPR18HkvfQDEu2yC0eyZHg7OUoSiWMQW0VIWYRydxL5xBNUJyURDLf7sRNSVmFs33h8t60GBSh0qRE6jPY12FoOLvBBWUv0PsmRyB81sd4qQT0yQVAuqoZvRelIlqsWuV9dMTa1kjRZglG32sfWlaAyDCuugGwXmb3sv7q9BNLc7kQMOGqW2LY4A7BVfXrhDhiVqBJSqRrcSIVxJ1s_l1usbs9gyD3jXZxUBMCsvAOabLzCnBnoLgJWIbmu7fc7Gh5ksE7WMi6_VXZm-ZPD6cWOFVX17y7DX3I9cIX1zVrgkGyLQ1de_MRNZuW3Cs74B4ECcUpfd5yJp-nAGVqj4zYHPmtXFLdqI2rbfumG9PFGIW-rXJOeHlD2sch-AA)
 ```basic
 10 dima(999):fori=0to999:reada(i):poke1024+i,a(i):next
