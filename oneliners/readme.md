@@ -8,10 +8,14 @@ use 1 and 9 to move your ship left and right
 ```basic
 0forx=0to5:r=s*xand1023:poke55296+r,14:poke1024+r,peek(1024+r)or128:next:s=s+1:goto
 ```
+# [Face & Dripping Paint Effect Demo](https://stigc.dk/c64/basic/?s=2nVfLbuMwDLz3K3xMNj6IpJ4B8jEBmu4GxTatkUM_v6Qkv91ENlChdiCSo9FwJIOqXq__z7sQwv74dmuuJ3W_8cuxuZxfz7vr_vh5e7-AQn241vH94_J9f0FV8eRvmWyOzenrz_f545Vn0Qup6vr2ebm872JQsz8R3v9dPiSNMRjsoal3Dc-m_QH0i1ZVV6Cph3G3BtCnakZVX6evAxz_3u63ChWXZ9jn-7kirB_-8UyYzARFNYDlATXKs1XdQA2184_zYVnleSAtBoLyNRrdQUGy_KzHsNDVwXMKnVJ4wz_RquJmFWrH9VHoEKptCkVNDI4imJ431wEURMPncX23lTX_O2vClBkztTA4R0g54g-BV8f0GeAVUgEAUKuQo4zEDsfCoHDBaKlDM0KwVXFAM-nrpLXMGu_tc_ZAzxfBXcBA-VnBUxClypuBccTRdh2D3fCsDW07EFvlB1P5uVZvWIqFk4QFBrXJ_-0zDFiqQGgZdKYvjrCBQeDu0mKTrgOxVYQ4FaGsfOq7_Z4zvYG3DnmASm0aVzERoYiFvYGXXIShSIPiKSk3JDAqtjOHPxJh8PM2BqpdEJsZQNiqQBwpMDZdxwGNjFgOL7EfCDquAeWAM5QaCbMGGRdqHhA4BmqvIo1PMFCRAv0QGvQKpAUF9g6EXb92fZV7jLdt2MO0VYHUKxCQO1hYE41nv4UFKXo3kaWkWfBBkGQ02urfQDyRYDzQZEPR18HkvfQDEu2yC0eyZHg7OUoSiWMQW0VIWYRydxL5xBNUJyURDLf7sRNSVmFs33h8t60GBSh0qRE6jPY12FoOLvBBWUv0PsmRyB81sd4qQT0yQVAuqoZvRelIlqsWuV9dMTa1kjRZglG32sfWlaAyDCuugGwXmb3sv7q9BNLc7kQMOGqW2LY4A7BVfXrhDhiVqBJSqRrcSIVxJ1s_l1usbs9gyD3jXZxUBMCsvAOabLzCnBnoLgJWIbmu7fc7Gh5ksE7WMi6_VXZm-ZPD6cWOFVX17y7DX3I9cIX1zVrgkGyLQ1de_MRNZuW3Cs74B4ECcUpfd5yJp-nAGVqj4zYHPmtXFLdqI2rbfumG9PFGIW-rXJOeHlD2sch-AA)
 ```basic
-0dima(999):fori=0to999:reada(i):poke55296+i,6:poke1024+i,a(i):next
-1forx=0to5.5+rnd(1):r=q*xand1023:poke55296+r,14:poke1024+r,peek(1024+r)or128:next:q=q+1:goto1
-200 data 7,12,9,20,3,8,13,48,14,4,5,32,32,32,32,32,32,32,32,32,32,32
+10 dima(999):fori=0to999:reada(i):poke1024+i,a(i):next
+20 forx=0to5:r=q*xand1023
+30 ifpeek(1024+r)=32thenpoke55296+r,(rand3)+14
+40 poke1024+r,peek(1024+r)or128:next
+50 q=q+1:goto 20
+200 data 32,32,32,32,32,32,32,32,32,32,32
 201 data 32,32,32,103,116,111,203,160,160,160,241,78,32,32,32,32,32,32,32,32,32
 202 data 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
 203 data 32,32,32,32,32,108,254,203,160,236,204,160,160,160,227,98
@@ -74,4 +78,4 @@ use 1 and 9 to move your ship left and right
 260 data 32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32
 261 data 39,120,239,160,228,105,32,32,32,32,32,32,32,32,32,32
 262 data 32,32,32,32,32,32,32,32
-55296 -1024```
+```
