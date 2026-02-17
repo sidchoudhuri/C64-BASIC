@@ -8,10 +8,7 @@ use 1 and 9 to move your ship left and right
 ```basic
 0forx=0to5:r=s*xand1023:poke55296+r,14:poke1024+r,peek(1024+r)or128:next:s=s+1:goto
 ```
-
-### Drip in 6502 machine language
-
-This is a direct machine-language version of the Drip loop (using `x=0..7` as in your variant):
+## Drip in 6502 machine language
 
 ```asm
 ; C64 6502
