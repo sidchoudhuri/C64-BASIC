@@ -7,7 +7,7 @@
 4 pokes+j*40+i,77.5+rnd(1):i=i+d:ifi>38ori<1thend=-d:j=j+1
 5 pokes+j*40+i,205.5+rnd(1):pokes+y*40+x,65:ifj=yandi=xthen?"{home}{down}boom!":end
 6 if(peek(56321)and16)=0andm<0thenm=x:n=y-1
-7 ifm>=0thenpokes+n*40+m,32:n=n-1:pokes+n*40+m,30:ifn<jthenm=-1
+7 ifm>=0thenpokes+n*40+m,32:n=n-1:pokes+n*40+m,30:ifn=jandm<>ithenpokes+n*40+m,32:m=-1
 8 ifm>=0andm=iandn=jthenpokes+j*40+i,32:sc=sc+23-j:goto
 9 print"{home}10 line 10 print invader! score:";sc:goto1
 ```
