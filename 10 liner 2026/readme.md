@@ -16,7 +16,7 @@
 0 x=20:y=22:m=-1:n=-1:i=0:j=2:d=1:s=1024:c=55296:poke53280,0:poke53281,0:print"{clear}";
 1 pokes+y*40+x,32:x=x+(peek(56321)and4)/4*+1-(peek(56321)and8)/8:x=x-40*int(x/40)
 2 pokec+j*40+i,14:pokes+j*40+i,77.5+rnd(1):i=i+d:ifi>38ori<1thend=-d:j=j+1
-3 pokec+j*40+i,iand15:pokes+j*40+i,205.5+rnd(1):pokec+y*40+x,3:pokes+y*40+x,65:ifi*j=x*ythenprint"{home}{down}{yel}boom!":gosub8:end
+3 pokec+j*40+i,iand15:pokes+j*40+i,205.5+rnd(1):pokec+y*40+x,3:pokes+y*40+x,65:ifj=yandi=xthenprint"{home}{down}{yel}boom!":gosub8:end
 4 if(peek(56321)and16)=0andm<0thenm=x:n=y-1:gosub8
 5 ifm>=0thenpokes+n*40+m,32:n=n-1:pokec+n*40+m,nand15:pokes+n*40+m,30:ifn=jandm<>ithenpokec+n*40+m,nand15:pokes+n*40+m,42:m=-1
 6 ifm>=0andm=iandn=jthenpokes+j*40+i,32:sc=sc+23-j:gosub8:goto
