@@ -23,7 +23,8 @@
 7 ifm>=0andm=iandn=jthenpokes+j*40+i,214:pokec+j*40+i,jand7:v=10:f=128:g=-4:gosub9:sc=sc+abs(y-j):goto0
 8 print"{home}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{blu}10 line{down}{left}{left}{left}{left}{left}{left}{left}10 print invader! {red}score:{lred}"sc"{red}lvl:{lred}"l"{lblu}":v=1:f=4:g=-4:gosub9:goto1
 9 poke54296,v:poke54277,0:poke54278,240:poke54276,16:poke54276,129:fore=fto0stepg:poke54273,e:next:poke54276,128:return
-### single line joystick and keyboard movement (l,r:o,p & u,d:e,d)
+```
+## single line joystick and keyboard movement (l,r:o,p & u,d:e,d)
 ```basic
 1 pokes+y*40+x,32:k=peek(197):x=x+(peek(js)and4)/4*1-(peek(js)and8)/8+(k=38)-(k=41):x=x-40*int(x/40):y=(y+(peek(js)and1)-(peek(js)and2)/2-(k=18)+(k=14))and16/l-1
 ```
