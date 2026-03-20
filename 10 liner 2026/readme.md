@@ -24,7 +24,7 @@
 8 print"{home}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{down}{blu}10 line{down}{left}{left}{left}{left}{left}{left}{left}10 print invader! {red}score:{lred}"sc"{red}lvl:{lred}"l"{lblu}":v=1:f=4:g=-4:gosub9:goto1
 9 poke54296,v:poke54277,0:poke54278,240:poke54276,16:poke54276,129:fore=fto0stepg:poke54273,e:next:poke54276,128:return
 ```
-# 10 line 10 print invader with sound, upwards, color, bomb evasion, bug fix past bottom of screen -- 120 char per line version
+# 10 line 10 print invader with sound, upwards, color, bomb evasion, buggy -- 120 char per line version
 ```basic
 0 x=20:y=2:l=l+1:m=-1:n=-1:i=0:j=21-l:d=1:s=1024:c=55296:js=56321:h=205.5:t=77.5:u=71.5:poke53280,0:poke53281,0:print"{clear}"
 1 pokes+y*40+x,32:x=x+(peek(js)and4)/4*1-(peek(js)and8)/8:x=x-40*int(x/40):y=(y+(peek(js)and1)-(peek(js)and2)/2)and16/l-1
