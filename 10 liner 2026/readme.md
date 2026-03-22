@@ -11,7 +11,7 @@
 8 ifm>=0andm=iandn=jthenpokes+j*40+i,32:sc=sc+23-j:goto
 9 print"{home}10 line 10 print invader! score:";sc:goto1
 ```
-# [FINAL for submission]()
+# [FINAL for submission](https://stigc.dk/c64/basic/?s=2xVTNcqMwDL7zFDQnKLCxjfmJp8q7kGASqDEdIFloJu--MgGaHHZmb3uRZVnSJ30SEHsARsQITChQHhU1BFRoI0ogogJGAyVyoKIDShgXR4gitotF1UEUh4yKM8ZHvyLRQ5LgcYGE4vHVfMooZCnxyapTo7el7je3o5JZe99Y1DaPnTe-c-INfsjEAIPnfEn56VSdm-mcu1v-ToNnU-puU-MXcPKO2Zxhy4mLLTjjSyR1X6KYu2XmTCw2gR69yoCWPuXiUcR8771W5w51kYDSy0VZTEmWZxc4a9pyH6YoP2h_ljqHIEemqkBZoZ3Bw088MDK_NKVEM0Tmn9fsRfUx4puz5nJNsiukogDKUnGCgIlT010Ou2kO00BwEha3D_AgbAY5-OGc_-CnIWYe91A1rVOBAShhmDLP1J-bWt5vefNbL3KU6n5omvrtpg7qct-IK2DBBbAoMkXwpQjs1Irsb5gb6DR0njZ11KIB_WizLF5GELtA8Kw_iKmghgFXa8Qtu4IBiPlzfiu2y6Lew-Q6taPNQmjQGJDBjLTQ2qyMXrxvhNXY8oS0L5f4VzfOpt22khnFOIMZjoZqRVx2gM1LsS6JyZ0YYsjPdFZiuiN0CHbonDGoXLT2DbFS-6-E_y9ppkuJrUotZ4uSRf9PEsOmduxSX7Nctm_2rZX5vTs2rRQ3ZfRNd9xMRnVVi0ltnnYKmXsZ-EQUtXbT5xhx_Kv4VzHrSbL8OFBPfcZ_brFP4-cL24kCq4ACWe96-XVaH0NfCi2H_sU7Fa3sL60WfwA)
 ```basic
 0 x=20:y=2:l=l+1:m=-1:n=-1:i=0:j=21-l:d=1:s=1024:c=55296:js=56321:h=205.5:t=77.5:u=71.5:poke53280,0:poke53281,0:print"{clear}"
 1 pokes+y*40+x,32:x=x+(peek(js)and4)/4*1-(peek(js)and8)/8:x=x-40*int(x/40):y=(y+(peek(js)and1)-(peek(js)and2)/2)and7
