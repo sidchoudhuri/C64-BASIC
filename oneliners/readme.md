@@ -1,8 +1,21 @@
 # [oneliner64.com](oneliner64.com)
 ## [A complete arcade action game for the C64 in one single line of code...](https://stigc.dk/c64/basic/?s=2M7QvcSzy0zDQ1DK21FTSUrJKd822KrAt0NbItjXU1AWSlppWBf6GRhYm2gU6RkZW-XkFNiZGBol-GgWuGobGRkBhTVsTI01to3R_HUMA) by Joep Geevers
 use 1 and 9 to move your ship left and right
+s=2PYxLCoAwDAX3nsRPkSQaNYEepn5wIVgRF_b2Si3uZobHg8NvCzc0oAG97bnPORSliGiIgp84i0CtjpaZpNPJItZcfQNNFz0ZaqKM1W2mSO4l4RTDH4NBYF395bPsAQ)
 ```basic
 1?tArN(0)*39)"*":gEk:p=p+(k=1)-(k=9):pO1284+p,22:onp<420aN(pE(1324+p)=42)+2gO,1
+```
+# [rnd(0) vs rnd(1)](https://stigc.dk/c64/basic/?s=2M6iwLcpL0dDT1LK0tLSqBHMMIZxEW0MDIxOrgvzs1ETtCh1DczMouxLINrdKzy_J5-ICAA)
+```basic
+0x=rnd(.)*999:y=rnd(1)*999:a=1024:pokea+x,176:pokea+y,177:goto
+```
+# [Circuits](https://stigc.dk/c64/basic/?s=2MyjIz041NTYyN9IxMrayT84oUtEwNLPUzswr0SjKS9HQ09Qy0tQyNdEEyxgZGaHJWGhaW6Xnl-QDAA)
+```basic
+0poke53272,23:?chr$(169+int(rnd(.)*2)*54)chr$(222+int(rnd(.)*2)*8);:goto
+```
+# [Drops](https://stigc.dk/c64/basic/?s=2PYxLCoAwDAX3nsRPkSQaNYEepn5wIVgRF_b2Si3uZobHg8NvCzc0oAG97bnPORSliGiIgp84i0CtjpaZpNPJItZcfQNNFz0ZaqKM1W2mSO4l4RTDH4NBYF395bPsAQ)
+```basic
+0poke53281,0:x=rnd(0)*999:y=rnd(1)*999:a=1024:b=55296:c=11.5+rnd(1):poke53272,23:pokeb+x,c:pokea+x,95:pokeb+y,c:pokea+y,105:goto
 ```
 # [Drip](https://stigc.dk/c64/basic/?s=2M0jzr7A1KMk3tSqyLdaqSPQzNDAytirwNzU1sjTTLtIxNAFygGImQHaBqwaEpZlfZGhkYZXnalVsW6xtaJXuDwA)
 ```basic
