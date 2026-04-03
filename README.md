@@ -24,5 +24,5 @@
 - [petscii mandelbrot](/petscii%20mandelbrot/readme.md)
 - [squiggly!](/squiggle/readme.md)
 #### By Others, people who've taught me a great deal
-- [BASIC code by Bobby Brightling](/others/bobbybrightling.md)
-- [BASIC code by Eyvind Ebsen](/others/eyvindebsen.md)
+- [BASIC code by Bobby Brightling](/Others/bobbybrightling.md)
+- [BASIC code by Eyvind Ebsen](/Others/eyvindebsen.md)
