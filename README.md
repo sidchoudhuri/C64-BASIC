@@ -23,6 +23,6 @@
 - [life](/life/readme.md) (1d cellular automata)
 - [petscii mandelbrot](/petscii%20mandelbrot/readme.md)
 - [squiggly!](/squiggle/readme.md)
-#### Code By Others, people who've taught me a great deal
+#### Code By Others
 - [BASIC code by Bobby Brightling](/Other/bobbybrightling.md)
 - [BASIC code by Eyvind Ebsen](/Other/eyvindebsen.md)
