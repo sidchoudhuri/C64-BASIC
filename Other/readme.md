@@ -3,7 +3,7 @@ The code below is a simple "one-line" action game written in C64 BASIC V2.  Its 
 You must use keyboard shortcuts to enter it using the C64 editor (e.g., use "fO" to enter "FOR").  Special C64 characters are shown in curly braces ({clr} is clear key, {down} is cursor down key, {home} is the home key, and {arrow up} is the arrow character, not the cursor up key). 
 Rules: Press the "1" key when the left edge of the score passes over the arrow.
 ```basic
-1print"{clr}{down}"tab(20)"{arrow up}":forx=-37to37:x=x+74*(x=37):print"{home}"tab(x*sgn(x))a:getk:a=a+(x=19)*(k=1):next
+1 print"{clr}{down}"tab(20)"{arrow up}":forx=-37to37:x=x+74*(x=37):print"{home}"tab(x*sgn(x))a:getk:a=a+(x=19)*(k=1):next
 ```
 I don't know what happens when the score exceeds 9 points. I have never had the patience to find out. 😉
 The game is loosely based on an action game I played on my HP 67 programmable calculator.  It was one of the only _action_ games I played on the calculator.  The display digits increased and deceased on the calculator's LED display.  The goal was to hit the A-E function key beneath the left-most digit.  In the 1970s, it was just as fun to play the HP 67 game as playing this game today. 😉 
