@@ -1,3 +1,18 @@
+# ["The Garbage Game by Bobby Brightling"](https://stigc.dk/c64/basic/?s=2DctLCoAgEADQq4QrPxlOWosBg2AkIhhFvVm36VCdofbvuaHkK4Gbg-GxnzuTB6RoZWWSk9omULqkdMl18Qo5siETnJZgSf34jx5bbBaw1JO7eJ9bNDxyzx8)
+The goal of this game is to completely fill the C64 screen with "garbage" text (no spaces).  It is a "one-liner" written in C64 BASIC V2.  
+
+As the game is played, garbage text streams down the screen.  The first five columns can be filled without doing anything.  After that, use the shift-key to shift columns.*   You lose points as the game runs.  The score is shown in the upper-left corner as a negative number.  The best score is the one closest to zero (least negative). 
+
+This version is an experiment in developing "one-liner" game techniques.  It does not halt when the screen is completely filled.  If you can figure out a way to get the game to stop when the screen is filled, and keep the game under 80 characters, let me know.  Other suggestions are also welcome.
+
+*A note about playing the game in the VICE emulator on Windows.: 
+Windows may see repetitive shift-keys as an attempt to turn on "Sticky Keys".  To avoid this, you can use "cursor up" or "cursor left".  This works because the VICE emulator sets the shift-state when these keys are used.
+
+The code is below.  The code can be entered into one 80-character line using the C64 editor if keyboard shortcuts are used (e.g., 'pO" for "poke").  Use the C64 home key to enter {home}.
+```basic
+0 poke1024+n,tiand31:d=-(rnd(.)>.1)*peek(653):n=n+d+40*(1-d)and1023:s=s-1:print"{home}"s:goto
+```
+
 # Ducks in a Row by Bobby Brightling
 The C64 BASIC V2 program below is a puzzle game that is a combination of the classic sliding block and "Lights Out" puzzles.
 I wrote it  so that it could be easily ported to other BASICs.  The code's comments contain some porting details and a subroutine contains the puzzle's instructions.  I will post a screenshot in a FB comment.
