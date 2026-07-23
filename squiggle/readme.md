@@ -90,7 +90,50 @@
 50 next x,i
 60 goto10
 ```
-# WORM
+# [WORM](https://stigc.dk/c64/basic/?s=2nVTbjpswEH33V7gWD3ihkW0gm7iy-i0ksAnaxCbGaJO_75hLcHY3atUXNAxzjmfOGcMZPpiu33HG5FkVhdiupVaciRxxjt-MbRR3ptEutrqKOX0pGKNIMNyq9qdPrWiSs1WRdI2OW1rqCrAZyqDAvNfnpE_X0kcaojjfQOHIQ-X43aV8irqUF1NoUy6m8JJyjvKZrU3ZkPf9wcsDISoY7pWTTnWyU1ZadZEX1UpdX12D1tOcAuY8GGeAFW232NZnfGo6h2B-XEZqf7RRzPOCJsSnMSbJmMroPZADEegAoMKDCGf4UbsFBSoOxGWUkL-p9oDieDlGDBQkEJXn_6kqQby4N7RIHIxJnqktChF2uL7TPBHeyyzYA2QaKhtMmKd7HaezvV5qZaUeizYMvHK91QiWbwTsbF2-4wZQnQNUuKP0hbOEs8UzJDj7eracVx9IJ41_dzftyivGtbXG_jN79g07kIKUzdsMXQGOKobdsdbDWbr-eLpen4hGz8jJlNUEyXKw6sPY848wkW6-Y_wkphitI11d2v2x0Qd_z3HINeyBPww-BgaK12DM0fwvlyLUNDAtY_d1Aduq2yrw-l4DF7KsKrw31vata4yGm8_wDlolcv4VnWodlxGVkN1FybmpInhNm5RTuUgNLmUgtVd6rCOMDD8C3_UuQvCvYH7oa8jYWoDPhFcg_CX9qTfgMdWIHh6VYlPLfwA)
+```basic
+10 gosub100:m=55296:n=1024
+11 fori=1toint(rnd(1)*500)
+20 p=p-rnd(.)+40.5+sin(p)and1023
+30 pokem+u,6:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
+40 pokem+p,0:poke1024+p,(48.5+rnd(1))
+50 u=t:t=s:s=r:r=q:q=p:nexti
+60 gosub200:goto11
+
+99 rem list
+100 a$=chr$(145)+"list  "+chr$(13)+chr$(13):gosub500
+105 a$="10 m=55296:n=1024"+chr$(13)
+110 a$=a$+"20 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
+111 gosub500
+120 a$="30 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:"
+150 a$=a$+"pokem+q,11"+chr$(13)+"40 pokem+p,0:poke1024+p,252"+chr$(13)
+160 a$=a$+"50 u=t:t=s:s=r:r=q:q=p:goto20"+chr$(13)
+161 gosub300:gosub500
+170 a$="run"+chr$(13):d=300:gosub500
+180 return
+
+200 a$="break in"+str$(int(rnd(1)*5)*10+10)+chr$(13)
+210 gosub300:gosub500:gosub100
+
+220 a$="?syntax  error in"+str$(int(rnd(1)*5)*10+10)+chr$(13)
+230 gosub300:gosub500
+
+240 ifint(rnd(.)*1)=0 then a$="new"+chr$(13)+chr$(13):gosub300:gosub500
+
+250 a$="load"+chr$(34)+"worm!"+chr$(34)+",8"+chr$(13)+chr$(13):d=300:gosub500
+260 a$="searching for worm!"+chr$(13)+"loading"+chr$(13)
+270 gosub300:a$=a$+chr$(13):gosub500:gosub100
+
+280 return
+
+300 a$=a$+"ready."+chr$(13):return
+
+399 add corruption
+400 b$="":fori=1tolen(a$):b$=b$+mid$(a$,i,1):ifint(rnd(1)*3)=0thenb$=b$+"0":next:a$=b$
+
+500 forx=1tolen(a$):printmid$(a$,x,1);::fory=0tod:next:next:d=0:return
+```
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```basic
 10 m=55296:n=1024:poke53272,23:?chr$(147);
 20 ifpeek(214)*40+peek(211)>996thenpoken+998,223:poken+999,222:poke211,0:poke214,0
@@ -117,7 +160,6 @@
 51 pokem+p,0:poke1024+p,252
 60 u=t:t=s:s=r:r=q:q=p:goto20
 ```
-12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```basic
 10 gosub100:m=55296:n=1024
 20 p=p-rnd(.)+40.5+sin(p)and1023
@@ -162,46 +204,4 @@
 210 a$=a$+"list"+chr$(13):gosub500:gosub100:return
 
 500 forx=1tolen(a$):printmid$(a$,x,1);:forw=1to10:next:next:return
-```
-```basic
-10 gosub100:m=55296:n=1024
-11 fori=1toint(rnd(1)*500)
-20 p=p-rnd(.)+40.5+sin(p)and1023
-30 pokem+u,6:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:pokem+q,11
-40 pokem+p,0:poke1024+p,(48.5+rnd(1))
-50 u=t:t=s:s=r:r=q:q=p:nexti
-60 gosub200:goto11
-
-99 rem list
-100 a$=chr$(145)+"list  "+chr$(13)+chr$(13):gosub500
-105 a$="10 m=55296:n=1024"+chr$(13)
-110 a$=a$+"20 p=p-rnd(.)+40.5+sin(p)and1023"+chr$(13)
-111 gosub500
-120 a$="30 pokem+u,14:poken+u,(48.5+rnd(1)):pokem+t,1:pokem+s,15:pokem+r,12:"
-150 a$=a$+"pokem+q,11"+chr$(13)+"40 pokem+p,0:poke1024+p,252"+chr$(13)
-160 a$=a$+"50 u=t:t=s:s=r:r=q:q=p:goto20"+chr$(13)
-161 gosub300:gosub500
-170 a$="run"+chr$(13):d=300:gosub500
-180 return
-
-200 a$="break in"+str$(int(rnd(1)*5)*10+10)+chr$(13)
-210 gosub300:gosub500:gosub100
-
-220 a$="?syntax  error in"+str$(int(rnd(1)*5)*10+10)+chr$(13)
-230 gosub300:gosub500
-
-240 ifint(rnd(.)*1)=0 then a$="new"+chr$(13)+chr$(13):gosub300:gosub500
-
-250 a$="load"+chr$(34)+"worm!"+chr$(34)+",8"+chr$(13)+chr$(13):d=300:gosub500
-260 a$="searching for worm!"+chr$(13)+"loading"+chr$(13)
-270 gosub300:a$=a$+chr$(13):gosub500:gosub100
-
-280 return
-
-300 a$=a$+"ready."+chr$(13):return
-
-399 add corruption
-400 b$="":fori=1tolen(a$):b$=b$+mid$(a$,i,1):ifint(rnd(1)*3)=0thenb$=b$+"0":next:a$=b$
-
-500 forx=1tolen(a$):printmid$(a$,x,1);::fory=0tod:next:next:d=0:return
 ```
