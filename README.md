@@ -12,6 +12,7 @@
   - [@ c64 wiki](https://www.c64-wiki.com/wiki/PETSCII_Codes_in_Listings)
   - [@ pagetable](https://www.pagetable.com/c64ref/charset/)
 #### My Code
+- [c64doku - Sudoku in C64 BASIC](https://github.com/sidchoudhuri/c64doku)
 - [globe](/globe/readme.md)
 - [hex64](/hex/readme.md)
 - [2026 10 liner compo](/10%20liner%202026/readme.md)
