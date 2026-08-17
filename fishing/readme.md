@@ -20,7 +20,7 @@
 3 tc=tc+1:iftc>=dltHtc=0:f=f+fd:iff<3orf>37tHfd=-fd:f=f+fd
 4 j=ba+h:gEa$:ifa$="a"andh>0tHh=h-1:pOj+1,rnd(0)*4+67:pOj+3,32
 5 ifa$="d"andh<39tHh=h+1:pOj-1,rnd(0)*4+67:pOj-3,32
-6 hc=60-2*(fd=1):pOg,hc:pOg-fd,122-hc:pOg-2*fd,hc:pOj,10
+6 hc=60-2*(fd=1):g=ba+f:pOg,hc:pOg-fd,122-hc:pOg-2*fd,hc:pOj,10
 7 ifa$=" "andh=ftHsc=sc+1:sl=int(sc/3)+1:dl=12-int(sc/3):ifdl<3tHdl=3
 8 ifa$=" "andh<>ftHlv=lv-1:?"{home}{down}line snapped!  ":fOx=1to450:nE
 9 iflv=0tH?"{home}{down}{down}game over";sc;"fish caught":end
