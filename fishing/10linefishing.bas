@@ -1,10 +1,10 @@
-1 ba=1504:f=2:fd=1:h=20:sc=0:lv=10:dl=12:sl=1:tc=0:print"{clr}10 line fishing! move a/d space to catch"
-2 pokeba+f,32:pokeba+f-fd,32:pokeba+f-2*fd,32:pokeba+h,32
-3 tc=tc+1:iftc>=dlthentc=0:f=f+fd:iff<3orf>37thenfd=-fd:f=f+fd
-4 geta$:ifa$="a"andh>0thenh=h-1
-5 ifa$="d"andh<39thenh=h+1
-6 hc=60-2*(fd=1):pokeba+f,hc:pokeba+f-fd,122-hc:pokeba+f-2*fd,hc:pokeba+h,10
-7 ifa$=" "andh=fthensc=sc+1:sl=int(sc/3)+1:dl=12-int(sc/3):ifdl<3thendl=3
-8 ifa$=" "andh<>fthenlv=lv-1:?"{home}{down}line snapped!  ":forx=1to200:next
-9 iflv=0thenprint"{home}{down}{down}game over";sc;"fish caught":end
-10 print"{home}{down}fish caught";sc;" lines   {left}{left}{left}";lv;" speed";sl;:goto2
+1 b=1504:f=2:d=1:h=20:c=0:v=10:y=12:s=1:t=0:pO54296,15:pO54277,9:pO54278,0:?"{clr}{white}10 line fishing! move a/d space to catch"
+2 g=b+f:pOg,32:pOg-d,32:pOg-2*d,rnd(0)*4+67:pOg-5*d,32:pOb+h,32
+3 t=t+1:ift>=ytHt=0:f=f+d:iff<3orf>37tHd=-d:f=f+d
+4 geta$:ifa$="a"andh>0tHh=h-1:pOb+h+1,rnd(0)*4+67:pOb+h+3,32
+5 ifa$="d"andh<39tHh=h+1:pOb+h-1,rnd(0)*4+67:pOb+h-3,32
+6 q=60-2*(d=1):g=b+f:pOg,q:pOg-d,122-q:pOg-2*d,q:pOb+h,10
+7 ifa$=" "andh=ftHc=c+1:s=int(c/3)+1:pO54273,80:pO54276,0:pO54276,17:y=12-int(c/3):ify<3tHy=3
+8 ifa$=" "andh<>fthenv=v-1:pO54273,20:pO54276,128:pO54276,129:?"{home}{down}line snapped!  ":fOx=1to450:nE
+9 ifv=0tH?"{home}{down}{down}game over";c;"fish caught":end
+10 ?"{home}{down}fish caught";c;" lines   {left}{left}{left}";v;" speed";s;:gO2
