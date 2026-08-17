@@ -13,3 +13,16 @@
 9 iflv=0thenprint"{home}{down}{down}game over";sc;"fish caught":end
 10 print"{home}{down}fish caught";sc;" lines   {left}{left}{left}";lv;" speed";sl;:goto2
 ```
+## compressed
+```basic
+1 ba=1504:f=2:fd=1:h=20:sc=0:lv=10:dl=12:sl=1:tc=0:?"{clr}{white}10 line fishing! move a/d space to catch"
+2 g=ba+f:pOg,32:pOg-fd,32:pOg-2*fd,rnd(0)*4+67:pOg-5*fd,32:pOba+h,32
+3 tc=tc+1:iftc>=dltHtc=0:f=f+fd:iff<3orf>37tHfd=-fd:f=f+fd
+4 j=ba+h:gEa$:ifa$="a"andh>0tHh=h-1:pOj+1,rnd(0)*4+67:pOj+3,32
+5 ifa$="d"andh<39tHh=h+1:pOj-1,rnd(0)*4+67:pOj-3,32
+6 hc=60-2*(fd=1):pOg,hc:pOg-fd,122-hc:pOg-2*fd,hc:pOj,10
+7 ifa$=" "andh=ftHsc=sc+1:sl=int(sc/3)+1:dl=12-int(sc/3):ifdl<3tHdl=3
+8 ifa$=" "andh<>ftHlv=lv-1:?"{home}{down}line snapped!  ":fOx=1to450:nE
+9 iflv=0tH?"{home}{down}{down}game over";sc;"fish caught":end
+10 ?"{home}{down}fish caught";sc;" lines   {left}{left}{left}";lv;" speed";sl;:gO2
+```
