@@ -1,4 +1,4 @@
-# 1 line pong - keyboard (A/Z)
+# [1 line pong - keyboard (A/Z)](https://stigc.dk/c64/basic/?s=2RY5BbsQgDEWv0kUXNgwqBqSZuHGkpEnbKFJACQvm_hcZyGZW9teXn5_9OIWsC5yOdc8__8cnULiP-wxZLOI3Rzn1UwWrCxcxRUHpfYe8SVqWDai7IydJGraKqWdpIDQtuBZ6R8hjJaRG8B3_xmMVQzl6TnFbRr3W4uadIfdQsA7SGGvvkfelZJ6LzMVAHRbr-6LnwlmyJn4K6XE6wTkD2YSgqj3krxAQkae380VQQNopuIynysB-8C4ejYqXR6wK1zLdHsR_MccX)
 ```basic
 0 S=1024:PRINTCHR$(147AND(T=0));:O=S+Y*40+X:X=-X*(X<39):K=PEEK(197):P=P+(K=10ANDP>1)-(K=12ANDP<21):A=S+P*40+39:FORI=-1TO3:POKEA+I*40,32-128*(I>=0ANDI<3):NEXT:DX=DX-(DX=0):X=X+DX:T=T+1:Y=1+ABS(22-(T-44*INT(T/44))):B=S+Y*40+X:DX=DX*(1+2*(PEEK(B+DX)<>32ORX=0)):POKEO,32:POKEB,81:GOTO
 ```
